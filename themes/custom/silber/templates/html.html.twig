@@ -1,0 +1,124 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display the basic html structure of a single
+ * Drupal page.
+ *
+ * Variables:
+ * - $css: An array of CSS files for the current page.
+ * - $language: (object) The language the site is being displayed in.
+ *   $language->language contains its textual representation.
+ *   $language->dir contains the language direction. It will either be 'ltr' or
+ *   'rtl'.
+ * - $rdf_namespaces: All the RDF namespace prefixes used in the HTML document.
+ * - $grddl_profile: A GRDDL profile allowing agents to extract the RDF data.
+ * - $head_title: A modified version of the page title, for use in the TITLE
+ *   tag.
+ * - $head_title_array: (array) An associative array containing the string parts
+ *   that were used to generate the $head_title variable, already prepared to be
+ *   output as TITLE tag. The key/value pairs may contain one or more of the
+ *   following, depending on conditions:
+ *   - title: The title of the current page, if any.
+ *   - name: The name of the site.
+ *   - slogan: The slogan of the site, if any, and if there is no title.
+ * - $head: Markup for the HEAD section (including meta tags, keyword tags, and
+ *   so on).
+ * - $styles: Style tags necessary to import all CSS files for the page.
+ * - $scripts: Script tags necessary to load the JavaScript files and settings
+ *   for the page.
+ * - $page_top: Initial markup from any modules that have altered the
+ *   page. This variable should always be output first, before all other dynamic
+ *   content.
+ * - $page: The rendered page content.
+ * - $page_bottom: Final closing markup from any modules that have altered the
+ *   page. This variable should always be output last, after all other dynamic
+ *   content.
+ * - $classes String of classes that can be used to style contextually through
+ *   CSS.
+ *
+ * @ingroup templates
+ *
+ * @see bootstrap_preprocess_html()
+ * @see template_preprocess()
+ * @see template_preprocess_html()
+ * @see template_process()
+ */
+#}
+{%
+  set body_classes = [
+    logged_in ? 'user-logged-in',
+    not root_path ? 'path-frontpage' : 'path-' ~ root_path|clean_class,
+    node_type ? 'page-node-type-' ~ node_type|clean_class,
+    db_offline ? 'db-offline',
+    theme.settings.navbar_position ? 'navbar-is-' ~ theme.settings.navbar_position,
+    theme.has_glyphicons ? 'has-glyphicons',
+  ]
+%}
+<!DOCTYPE html>
+<html {{ html_attributes }}>
+  <head>
+    <head-placeholder token="{{ placeholder_token|raw }}">
+    <title>{{ head_title|safe_join(' | ') }}</title>
+    <css-placeholder token="{{ placeholder_token|raw }}">
+    <js-placeholder token="{{ placeholder_token|raw }}">
+    <style type="text/css" id="syntaxhighlighteranchor"></style>
+<script type="text/javascript"> 
+    if (!window.console) console = {
+      log: function() {}
+    }; 
+  </script>
+  <link rel="stylesheet" id="responsi-css"  href="http://www.bu.edu/researchsupport/wp-content/themes/r-researchsupport/style.min.css?ver=1.4.2" type="text/css" media="all" />
+    <script type="text/javascript">
+      window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/www.bu.edu\/researchsupport\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.6.9"}};
+      !function(a,b,c){function d(a){var c,d,e,f,g,h=b.createElement("canvas"),i=h.getContext&&h.getContext("2d"),j=String.fromCharCode;if(!i||!i.fillText)return!1;switch(i.textBaseline="top",i.font="600 32px Arial",a){case"flag":return i.fillText(j(55356,56806,55356,56826),0,0),!(h.toDataURL().length<3e3)&&(i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,65039,8205,55356,57096),0,0),c=h.toDataURL(),i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,55356,57096),0,0),d=h.toDataURL(),c!==d);case"diversity":return i.fillText(j(55356,57221),0,0),e=i.getImageData(16,16,1,1).data,f=e[0]+","+e[1]+","+e[2]+","+e[3],i.fillText(j(55356,57221,55356,57343),0,0),e=i.getImageData(16,16,1,1).data,g=e[0]+","+e[1]+","+e[2]+","+e[3],f!==g;case"simple":return i.fillText(j(55357,56835),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode8":return i.fillText(j(55356,57135),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode9":return i.fillText(j(55358,56631),0,0),0!==i.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity","unicode9"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+    </script>
+    <style type="text/css">
+img.wp-smiley,
+img.emoji {
+  display: inline !important;
+  border: none !important;
+  box-shadow: none !important;
+  height: 1em !important;
+  width: 1em !important;
+  margin: 0 .07em !important;
+  vertical-align: -0.1em !important;
+  background: none !important;
+  padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='bu-branding-fonts-css'  href='//cloud.typography.com/6127692/660644/css/fonts.css?ver=0.1.2' type='text/css' media='all' />
+<link rel='stylesheet' id='glossary-hint-css'  href='http://www.bu.edu/researchsupport/wp-content/plugins/glossary-by-codeat/public/assets/css/tooltip-classic.css?ver=1.3.3' type='text/css' media='all' />
+<script type='text/javascript' src='http://www.bu.edu/researchsupport/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://www.bu.edu/researchsupport/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+
+    <script type="text/javascript">
+      //<![CDATA[
+    function bu_ga_track_pageview(e){var a,t=bu_ga_get_trackers();for(e||(e=void 0),_gaq.push(["_trackPageview",e]),a=0;a<t.length;a++)_gaq.push([t[a]+"._trackPageview",e])}function bu_ga_track_event(e){("undefined"==typeof e.value||null===e.value||isNaN(e.value))&&(e.value=0),"undefined"!=typeof e.delay&&null!==e.delay||(e.delay=0),"undefined"!=typeof e.noninteract&&null!==e.noninteract||(e.noninteract=!0),e.value=parseFloat(e.value);var a,t=bu_ga_get_trackers();for(_gaq.push(["_trackEvent",e.category,e.action,e.label,e.value,e.noninteract]),a=0;a<t.length;a++)_gaq.push([t[a]+"._trackEvent",e.category,e.action,e.label,e.value,e.noninteract]);e.delay&&setTimeout(function(){return!0},100)}function bu_ga_track_social(e){"undefined"!=typeof e.target&&"null"!=typeof e.target||(e.target=void 0),"undefined"!=typeof e.path&&"null"!=typeof e.path||(e.path=void 0);var a,t=bu_ga_get_trackers();for(_gaq.push(["_trackSocial",e.network,e.action,e.target,e.path]),a=0;a<t.length;a++)_gaq.push([t[a]+"._trackSocial",e.network,e.action,e.target,e.path])}function bu_ga_get_trackers(){return"undefined"==typeof buGa||"undefined"==typeof buGa.trackerNames?[]:buGa.trackerNames}function bu_ga_get_tracker(e){if("undefined"==typeof buGa||"undefined"==typeof buGa.trackerIds)return null;if("undefined"==typeof e||"null"==typeof e)return"";var a=buGa.trackerIds;for(var t in a)if(a[t]===e)return"a"===t?"":t;return null}var buGa = {"trackerNames":["b"],"trackerIds":{"a":"UA-124985-1","b":"UA-36737920-1"}};
+
+      var _gaq = _gaq || [];
+
+            _gaq.push(['_setAccount', 'UA-124985-1']);
+      _gaq.push(['_trackPageview']);
+            _gaq.push(['b._setAccount', 'UA-36737920-1']);
+      _gaq.push(['b._trackPageview']);
+            /* begin other trackers */
+      
+      
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+      //]]>
+    </script>
+  </head>
+  <body class="home page page-id-5 page-template has-bu-branding l-sideNav sidebarLocation-right page-template-no-sidebars" id="top">
+    <a href="#main-content" class="visually-hidden focusable skip-link">
+      {{ 'Skip to main content'|t }}
+    </a>
+    {{ page_top }}
+    {{ page }}
+    {{ page_bottom }}
+    <js-bottom-placeholder token="{{ placeholder_token|raw }}">
+  </body>
+</html>
