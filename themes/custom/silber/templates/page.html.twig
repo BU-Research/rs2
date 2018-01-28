@@ -52,528 +52,143 @@
  */
 #}
 {% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
-{# Navbar #}
-{% if page.navigation or page.navigation_collapsible %}
-  {% block navbar %}
-    {%
-      set navbar_classes = [
-        'navbar', 'expanded-menu-container',
-        theme.settings.navbar_inverse ? 'navbar-inverse' : 'navbar-default',
-        theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clean_class : container,
-      ]
-    %}
-
-    <header class="masthead" role="banner">
-      <div class="masthead-container">
-        <div class="brand">
-          <a class="brand-signature has-title brand-container" href="http://www.bu.edu/researchsupport/" rel="home">
-            <span class="sitename brand-part-sitename">Research Support</span>
-          </a>
-          <p class="siteDescription"></p>
-        <a href="#quicksearch" class="searchToggle"><span>Search</span></a>
-        </div>
-<form role="search" method="get" id="quicksearch" action="http://www.bu.edu/researchsupport/">
-  <fieldset>
-    <legend class="screen-reader-text"><span>Search</span></legend>
-    <div class="typeahead__container">
-      <div class="typeahead__field">
-          <span class="typeahead__query">
-            <label>
-              <span class="screen-reader-text">Search for:</span>
-              <input id="typeaheadsearch" aria-label="Search" class="js-typeahead" name="s" placeholder="Search site&hellip;" title="Search for:" type="search" autocomplete="off" />
-            </label>
-          </span>
-        <span class="typeahead__button">
-            <button type="submit">
-              <span class="typeahead__search-icon">Search</span>
-            </button>
-          </span>
-      </div>
+  {% if page.top_bar %}
+  <header class="masthead col-lg-12" role="banner">
+    <div class="masthead-container">
+    {{ page.top_bar }}
     </div>
-  </fieldset>
-</form>        
-      </div>
-          <!-- overlay -->
-    <div class="overlay">
+  <div class="overlay">
     <div class="overlay-content">
-<div class="menu-expanded-menu-container"><ul id="menu-expanded-menu" class="menu"><li id="menu-item-4990" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4990"><a href="http://www.bu.edu/researchsupport/project-lifecycle/">Project Lifecycle</a>
-<ul class="sub-menu">
-  <li id="menu-item-4991" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4991"><a href="http://www.bu.edu/researchsupport/project-lifecycle/finding-funding/">Find Funding</a></li>
-  <li id="menu-item-4992" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4992"><a href="http://www.bu.edu/researchsupport/project-lifecycle/preparing-a-proposal/">Prepare a Proposal</a></li>
-  <li id="menu-item-4993" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4993"><a href="http://www.bu.edu/researchsupport/project-lifecycle/proposal-review-and-submission/">Proposal Review and Submission</a></li>
-  <li id="menu-item-4995" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4995"><a href="http://www.bu.edu/researchsupport/project-lifecycle/award-review-and-acceptance/">Award Review and Acceptance</a></li>
-  <li id="menu-item-4996" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4996"><a href="http://www.bu.edu/researchsupport/project-lifecycle/setting-up-an-award/">Award Set-Up</a></li>
-  <li id="menu-item-4994" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4994"><a href="http://www.bu.edu/researchsupport/project-lifecycle/managing-an-award/">Manage an Award</a></li>
-  <li id="menu-item-4998" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4998"><a href="http://www.bu.edu/researchsupport/project-lifecycle/conducting-research/">Conducting Research</a></li>
-  <li id="menu-item-4997" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4997"><a href="http://www.bu.edu/researchsupport/project-lifecycle/closing-out-an-award/">Close Out an Award</a></li>
-  <li id="menu-item-4999" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4999"><a href="http://www.bu.edu/researchsupport/project-lifecycle/bring-to-market/">Bring to Market</a></li>
-</ul>
-</li>
-<li id="menu-item-5000" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-5000"><a href="http://www.bu.edu/researchsupport/compliance/">Compliance</a>
-<ul class="sub-menu">
-  <li id="menu-item-6538" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6538"><a href="http://www.bu.edu/researchsupport/compliance/animal-care/">Animal Care &#038; Use</a></li>
-  <li id="menu-item-5031" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5031"><a href="http://www.bu.edu/researchsupport/compliance/dual-use-research-of-concern/">Dual Use Research of Concern</a></li>
-  <li id="menu-item-5001" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5001"><a href="http://www.bu.edu/researchsupport/compliance/export-control/">Export Control</a></li>
-  <li id="menu-item-5029" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5029"><a href="http://www.bu.edu/researchsupport/compliance/conflicts-of-interest/">Financial Conflicts of Interest</a></li>
-  <li id="menu-item-5027" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5027"><a href="http://www.bu.edu/researchsupport/compliance/human-subjects/">Human Subjects</a></li>
-  <li id="menu-item-5024" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5024"><a href="http://www.bu.edu/researchsupport/compliance/animal-care/institutional-animal-care-use-iacuc/">Institutional Animal Care &#038; Use (IACUC)</a></li>
-  <li id="menu-item-5034" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5034"><a href="http://www.bu.edu/researchsupport/compliance/ibc/">Institutional Biosafety Committee</a></li>
-  <li id="menu-item-5035" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5035"><a href="http://www.bu.edu/researchsupport/compliance/laboratory-safety/">Laboratory Safety</a></li>
-  <li id="menu-item-5033" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5033"><a href="http://www.bu.edu/researchsupport/compliance/radiation-safety/">Radiation Safety</a></li>
-  <li id="menu-item-5030" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5030"><a href="http://www.bu.edu/researchsupport/compliance/responsible-conduct-of-research/">Responsible Conduct of Research</a></li>
-  <li id="menu-item-5032" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5032"><a href="http://www.bu.edu/researchsupport/compliance/scientific-diving-safety/">Scientific Diving and Small Boat Safety</a></li>
-</ul>
-</li>
-<li id="menu-item-5039" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-5039"><a href="http://www.bu.edu/researchsupport/formsandpolicies/">Forms &#038; Policies</a>
-<ul class="sub-menu">
-  <li id="menu-item-6540" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6540"><a href="http://www.bu.edu/researchsupport/formsandpolicies/form-library/">Form Library</a></li>
-  <li id="menu-item-5040" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5040"><a href="http://www.bu.edu/researchsupport/formsandpolicies/policy-library/">Policy Library</a></li>
-</ul>
-</li>
-<li id="menu-item-5041" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-5041"><a href="http://www.bu.edu/researchsupport/training-how-to/">Training &#038; How To</a>
-<ul class="sub-menu">
-  <li id="menu-item-8230" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8230"><a href="http://www.bu.edu/researchsupport/training-how-to/animal-housing-and-special-services-process-submitting-an-isr/">Animal Housing and Special Services Process: Submitting an ISR</a></li>
-  <li id="menu-item-8231" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8231"><a href="http://www.bu.edu/researchsupport/training-how-to/animal-ordering-submitting-an-isr/">Animal Ordering: Submitting an ISR</a></li>
-  <li id="menu-item-5048" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5048"><a href="http://www.bu.edu/researchsupport/training-how-to/conflict-of-interest-training/">Conflict of Interest Training</a></li>
-  <li id="menu-item-6542" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6542"><a href="http://www.bu.edu/researchsupport/training-how-to/create-a-digital-signature/">Create a Digital Signature</a></li>
-  <li id="menu-item-5049" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5049"><a href="http://www.bu.edu/researchsupport/training-how-to/environmental-health-and-safety-training/">Environmental Health and Safety Training</a></li>
-  <li id="menu-item-5051" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5051"><a href="http://www.bu.edu/researchsupport/training-how-to/human-subjects-training/">Human Subjects Training</a></li>
-  <li id="menu-item-5045" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5045"><a href="http://www.bu.edu/researchsupport/training-how-to/iacuc-training/">IACUC Training</a></li>
-  <li id="menu-item-5043" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5043"><a href="http://www.bu.edu/researchsupport/training-how-to/responsible-conduct-of-research-training/">Responsible Conduct of Research Training</a></li>
-  <li id="menu-item-5050" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5050"><a href="http://www.bu.edu/researchsupport/training-how-to/rims-training/">RIMS Training</a></li>
-  <li id="menu-item-5053" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5053"><a href="http://www.bu.edu/researchsupport/training-how-to/sponsor-system-registration/">Sponsor System Registration</a></li>
-</ul>
-</li>
-<li id="menu-item-5054" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-5054"><a href="http://www.bu.edu/researchsupport/safety/">Safety</a>
-<ul class="sub-menu">
-  <li id="menu-item-5056" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5056"><a href="http://www.bu.edu/researchsupport/safety/culture-of-safety-responsibility/">Culture of Safety &#038; Responsibility</a></li>
-  <li id="menu-item-5058" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5058"><a href="http://www.bu.edu/researchsupport/safety/emergency-information-contacts/">Emergency Information &#038; Contacts</a></li>
-  <li id="menu-item-6544" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6544"><a href="http://www.bu.edu/researchsupport/safety/rohp/">Research Occupational Health Program (ROHP)</a></li>
-  <li id="menu-item-5057" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5057"><a href="http://www.bu.edu/researchsupport/safety/reporting/">Reporting</a></li>
-</ul>
-</li>
-<li id="menu-item-5062" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-5062"><a href="http://www.bu.edu/researchsupport/tools-services/">Tools &#038; Services</a>
-<ul class="sub-menu">
-  <li id="menu-item-8233" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8233"><a href="http://www.bu.edu/researchsupport/tools-services/research-administration-advisory-council/">Advisory Council for Research Administration (ACRA)</a></li>
-  <li id="menu-item-6545" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6545"><a href="http://www.bu.edu/researchsupport/tools-services/confidentiality-agreements/">Confidentiality Agreements</a></li>
-  <li id="menu-item-5072" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5072"><a href="http://www.bu.edu/researchsupport/tools-services/core-facilities/">Core Facilities</a></li>
-  <li id="menu-item-5073" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5073"><a href="http://www.bu.edu/researchsupport/tools-services/facilities-administrative/">Facilities and Administrative Costs and Analysis</a></li>
-  <li id="menu-item-6546" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6546"><a href="http://www.bu.edu/researchsupport/tools-services/faculty-departure-checklist/">Faculty Departure Checklist</a></li>
-  <li id="menu-item-7464" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7464"><a href="http://www.bu.edu/researchsupport/glossary/">Glossary</a></li>
-  <li id="menu-item-5065" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5065"><a href="http://www.bu.edu/researchsupport/tools-services/institutional-numbers-and-rates/">Institutional Numbers and Rates</a></li>
-  <li id="menu-item-6548" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6548"><a href="http://www.bu.edu/researchsupport/tools-services/material-transfer-agreements/">Material Transfer Agreements</a></li>
-  <li id="menu-item-8232" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8232"><a href="http://www.bu.edu/researchsupport/tools-services/my-grant-expenses/">My Grant Expenses</a></li>
-  <li id="menu-item-5068" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5068"><a href="http://www.bu.edu/researchsupport/tools-services/recognition-opportunities/">Recognition Opportunities</a></li>
-  <li id="menu-item-5063" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5063"><a href="http://www.bu.edu/researchsupport/tools-services/info-systems-and-web-apps/research-information-management-system-rims/">Research Information Management System (RIMS)</a></li>
-  <li id="menu-item-5067" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5067"><a href="http://www.bu.edu/researchsupport/tools-services/research-participation/">Research Participation</a></li>
-  <li id="menu-item-5070" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5070"><a href="http://www.bu.edu/researchsupport/tools-services/service-center-administration/">Service Center Administration</a></li>
-  <li id="menu-item-8234" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8234"><a href="http://www.bu.edu/researchsupport/tools-services/sponsored-research-reporting/">Sponsored Research Reporting</a></li>
-  <li id="menu-item-5074" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5074"><a href="http://www.bu.edu/researchsupport/tools-services/property-management/">Property Management Manual</a></li>
-  <li id="menu-item-5071" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5071"><a href="http://www.bu.edu/researchsupport/tools-services/public-health-service-agencies/">Public Health Service Agencies</a></li>
-</ul>
-</li>
-<li id="menu-item-5075" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-5075"><a href="http://www.bu.edu/researchsupport/news-calendar/">News &#038; Calendar</a>
-<ul class="sub-menu">
-  <li id="menu-item-5076" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5076"><a href="http://www.bu.edu/researchsupport/news-calendar/announcements/">Announcements</a></li>
-  <li id="menu-item-7463" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7463"><a href="http://www.bu.edu/researchsupport/news-calendar/calendar/">Calendar</a></li>
-</ul>
-</li>
-<li id="menu-item-5079" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-5079"><a href="http://www.bu.edu/researchsupport/contact/">Contact</a>
-<ul class="sub-menu">
-  <li id="menu-item-5083" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5083"><a href="http://www.bu.edu/researchsupport/contact/contact-us/">Contact us</a></li>
-  <li id="menu-item-5080" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5080"><a href="http://www.bu.edu/researchsupport/contact/departmental-contacts/">Find your Department and Research Administrators</a></li>
-  <li id="menu-item-5081" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5081"><a href="http://www.bu.edu/researchsupport/contact/directory/">Directory</a></li>
-  <li id="menu-item-5084" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5084"><a href="http://www.bu.edu/researchsupport/contact/feedback/">Feedback</a></li>
-  <li id="menu-item-5082" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5082"><a href="http://www.bu.edu/researchsupport/contact/signature-authority/">Signature Authority</a></li>
-</ul>
-</li>
-<li id="menu-item-11713" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-11713"><a href="http://www.bu.edu/researchsupport/?page_id=9815">Administration</a>
-<ul class="sub-menu">
-  <li id="menu-item-11714" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11714"><a href="http://www.bu.edu/researchsupport/administration/job-openings/">Job Openings</a></li>
-</ul>
-</li>
-</ul></div>   </div>
+      {# Navbar #}
+        {{ page.navigation_collapsible }}
+    </div>
     <div class="close">
-      <a href="#extended-menu" class="navToggle"><span>Menu</span></a>
+      <a class="navToggle" href="#extended-menu"><span>Menu</span></a>
     </div>
   </div>
-  <!-- end overlay -->
-    </header>
-
+  </header>
+  {% endif %}         
   <div class="wrapper">
-
+    
     <div class="expanded-menu-container">
       <div class="nav-sidebar rotate">
         <span class="menu-open">Open Menu</span>
       </div>
-      <a href="#extended-menu" class="navToggle"><span>Menu</span></a>
-      <nav class="primaryNav" role="navigation">
-        <a href="#primaryNav-menu" class="navToggle"><span>Menu</span></a>
-        <ul id="primaryNav-menu" class="primaryNav-menu "><li class="page_item page-item-550">
-          
-<a class="level_1" href="http://www.bu.edu/researchsupport/project-lifecycle/" title="Navigate to: Project Lifecycle">Project Lifecycle</a>
- 
-<ul>
-<li class="page_item page-item-1506">
-<a class="level_2" href="http://www.bu.edu/researchsupport/project-lifecycle/finding-funding/" title="Navigate to: Find Funding">Find Funding</a>
- </li>
-<li class="page_item page-item-2542">
-<a class="level_2" href="http://www.bu.edu/researchsupport/project-lifecycle/preparing-a-proposal/" title="Navigate to: Prepare a Proposal">Prepare a Proposal</a>
- </li>
-<li class="page_item page-item-3094">
-<a class="level_2" href="http://www.bu.edu/researchsupport/project-lifecycle/proposal-review-and-submission/" title="Navigate to: Proposal Review and Submission">Proposal Review and Submission</a>
- </li>
-<li class="page_item page-item-2758">
-<a class="level_2" href="http://www.bu.edu/researchsupport/project-lifecycle/award-review-and-acceptance/" title="Navigate to: Award Review and Acceptance">Award Review and Acceptance</a>
- </li>
-<li class="page_item page-item-739">
-<a class="level_2" href="http://www.bu.edu/researchsupport/project-lifecycle/setting-up-an-award/" title="Navigate to: Award Set-Up">Award Set-Up</a>
- </li>
-<li class="page_item page-item-2880">
-<a class="level_2" href="http://www.bu.edu/researchsupport/project-lifecycle/managing-an-award/" title="Navigate to: Manage an Award">Manage an Award</a>
- </li>
-<li class="page_item page-item-3785">
-<a class="level_2" href="http://www.bu.edu/researchsupport/project-lifecycle/conducting-research/" title="Navigate to: Conducting Research">Conducting Research</a>
- </li>
-<li class="page_item page-item-548">
-<a class="level_2" href="http://www.bu.edu/researchsupport/project-lifecycle/closing-out-an-award/" title="Navigate to: Close Out an Award">Close Out an Award</a>
- </li>
-<li class="page_item page-item-2548">
-<a class="level_2" href="http://www.bu.edu/researchsupport/project-lifecycle/bring-to-market/" title="Navigate to: Bring to Market">Bring to Market</a>
- </li>
-
-</ul>
-</li>
-<li class="page_item page-item-418">
-<a class="level_1" href="http://www.bu.edu/researchsupport/compliance/" title="Navigate to: Compliance">Compliance</a>
- 
-<ul>
-<li class="page_item page-item-1116">
-<a class="level_2" href="http://www.bu.edu/researchsupport/compliance/animal-care/" title="Navigate to: Animal Care &amp; Use">Animal Care &amp; Use</a>
- </li>
-<li class="page_item page-item-444">
-<a class="level_2" href="http://www.bu.edu/researchsupport/compliance/scientific-diving-safety/" title="Navigate to: Scientific Diving and Small Boat Safety">Scientific Diving and Small Boat Safety</a>
- </li>
-<li class="page_item page-item-1371">
-<a class="level_2" href="http://www.bu.edu/researchsupport/compliance/dual-use-research-of-concern/" title="Navigate to: Dual Use Research of Concern">Dual Use Research of Concern</a>
- </li>
-<li class="page_item page-item-1830">
-<a class="level_2" href="http://www.bu.edu/researchsupport/compliance/export-control/" title="Navigate to: Export Control">Export Control</a>
- </li>
-<li class="page_item page-item-3102">
-<a class="level_2" href="http://www.bu.edu/researchsupport/compliance/conflicts-of-interest/" title="Navigate to: Financial Conflicts of Interest">Financial Conflicts of Interest</a>
- </li>
-<li class="page_item page-item-420">
-<a class="level_2" href="http://www.bu.edu/researchsupport/compliance/human-subjects/" title="Navigate to: Human Subjects">Human Subjects</a>
- </li>
-<li class="page_item page-item-1130">
-<a class="level_2" href="http://www.bu.edu/researchsupport/compliance/ibc/" title="Navigate to: Institutional Biosafety Committee">Institutional Biosafety Committee</a>
- </li>
-<li class="page_item page-item-455">
-<a class="level_2" href="http://www.bu.edu/researchsupport/compliance/laboratory-safety/" title="Navigate to: Laboratory Safety">Laboratory Safety</a>
- </li>
-<li class="page_item page-item-491">
-<a class="level_2" href="http://www.bu.edu/researchsupport/compliance/radiation-safety/" title="Navigate to: Radiation Safety">Radiation Safety</a>
- </li>
-<li class="page_item page-item-628">
-<a class="level_2" href="http://www.bu.edu/researchsupport/compliance/responsible-conduct-of-research/" title="Navigate to: Responsible Conduct of Research">Responsible Conduct of Research</a>
- </li>
-
-</ul>
-</li>
-<li class="page_item page-item-3390">
-<a class="level_1" href="http://www.bu.edu/researchsupport/formsandpolicies/" title="Navigate to: Forms &amp; Policies">Forms &amp; Policies</a>
- 
-<ul>
-<li class="page_item page-item-5126">
-<a class="level_2" href="http://www.bu.edu/researchsupport/formsandpolicies/form-library/" title="Navigate to: Form Library">Form Library</a>
- </li>
-<li class="page_item page-item-3075">
-<a class="level_2" href="http://www.bu.edu/researchsupport/formsandpolicies/policy-library/" title="Navigate to: Policy Library">Policy Library</a>
- </li>
-
-</ul>
-</li>
-<li class="page_item page-item-3392">
-<a class="level_1" href="http://www.bu.edu/researchsupport/training-how-to/" title="Navigate to: Training &amp; How To">Training &amp; How To</a>
- 
-<ul>
-<li class="page_item page-item-10520">
-<a class="level_2" href="http://www.bu.edu/researchsupport/training-how-to/animal-care-standard-operating-procedures/" title="Navigate to: Animal Care SOPs">Animal Care SOPs</a>
- </li>
-<li class="page_item page-item-7077">
-<a class="level_2" href="http://www.bu.edu/researchsupport/training-how-to/animal-housing-and-special-services-process-submitting-an-isr/" title="Navigate to: Animal Housing and Special Services Process: Submitting an ISR">Animal Housing and Special Services Process: Submitting an ISR</a>
- </li>
-<li class="page_item page-item-7075">
-<a class="level_2" href="http://www.bu.edu/researchsupport/training-how-to/animal-ordering-submitting-an-isr/" title="Navigate to: Animal Ordering: Submitting an ISR">Animal Ordering: Submitting an ISR</a>
- </li>
-<li class="page_item page-item-2642">
-<a class="level_2" href="http://www.bu.edu/researchsupport/training-how-to/conflict-of-interest-training/" title="Navigate to: Conflict of Interest Training">Conflict of Interest Training</a>
- </li>
-<li class="page_item page-item-4097">
-<a class="level_2" href="http://www.bu.edu/researchsupport/training-how-to/create-a-digital-signature/" title="Navigate to: Create a Digital Signature">Create a Digital Signature</a>
- </li>
-<li class="page_item page-item-2678">
-<a class="level_2" href="http://www.bu.edu/researchsupport/training-how-to/environmental-health-and-safety-training/" title="Navigate to: Environmental Health and Safety Training">Environmental Health and Safety Training</a>
- </li>
-<li class="page_item page-item-2721">
-<a class="level_2" href="http://www.bu.edu/researchsupport/training-how-to/human-subjects-training/" title="Navigate to: Human Subjects Training">Human Subjects Training</a>
- </li>
-<li class="page_item page-item-2891">
-<a class="level_2" href="http://www.bu.edu/researchsupport/training-how-to/iacuc-training/" title="Navigate to: IACUC Training">IACUC Training</a>
- </li>
-<li class="page_item page-item-2744">
-<a class="level_2" href="http://www.bu.edu/researchsupport/training-how-to/responsible-conduct-of-research-training/" title="Navigate to: Responsible Conduct of Research Training">Responsible Conduct of Research Training</a>
- </li>
-<li class="page_item page-item-3821">
-<a class="level_2" href="http://www.bu.edu/researchsupport/training-how-to/rims-training/" title="Navigate to: RIMS Training">RIMS Training</a>
- </li>
-<li class="page_item page-item-4724">
-<a class="level_2" href="http://www.bu.edu/researchsupport/training-how-to/sponsor-system-registration/" title="Navigate to: Sponsor System Registration">Sponsor System Registration</a>
- </li>
-
-</ul>
-</li>
-<li class="page_item page-item-3388">
-<a class="level_1" href="http://www.bu.edu/researchsupport/safety/" title="Navigate to: Safety">Safety</a>
- 
-<ul>
-<li class="page_item page-item-3106">
-<a class="level_2" href="http://www.bu.edu/researchsupport/safety/culture-of-safety-responsibility/" title="Navigate to: Culture of Safety &amp; Responsibility">Culture of Safety &amp; Responsibility</a>
- </li>
-<li class="page_item page-item-3396">
-<a class="level_2" href="http://www.bu.edu/researchsupport/safety/emergency-information-contacts/" title="Navigate to: Emergency Information &amp; Contacts">Emergency Information &amp; Contacts</a>
- </li>
-<li class="page_item page-item-3108">
-<a class="level_2" href="http://www.bu.edu/researchsupport/safety/rohp/" title="Navigate to: Research Occupational Health Program (ROHP)">Research Occupational Health Program (ROHP)</a>
- </li>
-<li class="page_item page-item-3394">
-<a class="level_2" href="http://www.bu.edu/researchsupport/safety/reporting/" title="Navigate to: Reporting">Reporting</a>
- </li>
-
-</ul>
-</li>
-<li class="page_item page-item-571">
-<a class="level_1" href="http://www.bu.edu/researchsupport/tools-services/" title="Navigate to: Tools &amp; Services">Tools &amp; Services</a>
- 
-<ul>
-<li class="page_item page-item-7543">
-<a class="level_2" href="http://www.bu.edu/researchsupport/tools-services/communications-and-media-training/" title="Navigate to: Communications and Media Training">Communications and Media Training</a>
- </li>
-<li class="page_item page-item-3960">
-<a class="level_2" href="http://www.bu.edu/researchsupport/tools-services/confidentiality-agreements/" title="Navigate to: Confidentiality Agreements">Confidentiality Agreements</a>
- </li>
-<li class="page_item page-item-573">
-<a class="level_2" href="http://www.bu.edu/researchsupport/tools-services/core-facilities/" title="Navigate to: Core Facilities">Core Facilities</a>
- </li>
-<li class="page_item page-item-8349">
-<a class="level_2" href="http://www.bu.edu/researchsupport/tools-services/corporate-relations/" title="Navigate to: Corporate Relations">Corporate Relations</a>
- </li>
-<li class="page_item page-item-8382">
-<a class="level_2" href="http://www.bu.edu/researchsupport/tools-services/digital-scholarship-services/" title="Navigate to: Digital Scholarship Services">Digital Scholarship Services</a>
- </li>
-<li class="page_item page-item-569">
-<a class="level_2" href="http://www.bu.edu/researchsupport/tools-services/facilities-administrative/" title="Navigate to: F&amp;A Costs">F&amp;A Costs</a>
- </li>
-<li class="page_item page-item-6268">
-<a class="level_2" href="http://www.bu.edu/researchsupport/tools-services/faculty-departure-checklist/" title="Navigate to: Faculty Departure Checklist">Faculty Departure Checklist</a>
- </li>
-<li class="page_item page-item-8346">
-<a class="level_2" href="http://www.bu.edu/researchsupport/tools-services/foundation-relations/" title="Navigate to: Foundation Relations">Foundation Relations</a>
- </li>
-<li class="page_item page-item-6656">
-<a class="level_2" href="http://www.bu.edu/researchsupport/glossary/" title="Navigate to: Glossary">Glossary</a>
- </li>
-<li class="page_item page-item-2782">
-<a class="level_2" href="http://www.bu.edu/researchsupport/tools-services/institutional-numbers-and-rates/" title="Navigate to: Institutional Numbers and Rates">Institutional Numbers and Rates</a>
- </li>
-<li class="page_item page-item-2882">
-<a class="level_2" href="http://www.bu.edu/researchsupport/tools-services/material-transfer-agreements/" title="Navigate to: Material Transfer Agreements">Material Transfer Agreements</a>
- </li>
-<li class="page_item page-item-2780">
-<a class="level_2" href="http://www.bu.edu/researchsupport/tools-services/my-grant-expenses/" title="Navigate to: My Grant Expenses">My Grant Expenses</a>
- </li>
-<li class="page_item page-item-1535">
-<a class="level_2" href="http://www.bu.edu/researchsupport/tools-services/recognition-opportunities/" title="Navigate to: Recognition Opportunities">Recognition Opportunities</a>
- </li>
-<li class="page_item page-item-10126">
-<a class="level_2" href="http://www.bu.edu/researchsupport/tools-services/research-computing/" title="Navigate to: Research Computing">Research Computing</a>
- </li>
-<li class="page_item page-item-7885">
-<a class="level_2" href="http://www.bu.edu/researchsupport/tools-services/research-administration-advisory-council/" title="Navigate to: Advisory Council for Research Administration ">Advisory Council for Research Administration</a>
- </li>
-<li class="page_item page-item-1537">
-<a class="level_2" href="http://www.bu.edu/researchsupport/tools-services/research-participation/" title="Navigate to: Research Participation">Research Participation</a>
- </li>
-<li class="page_item page-item-2381">
-<a class="level_2" href="http://www.bu.edu/researchsupport/tools-services/service-center-administration/" title="Navigate to: Service Center Administration">Service Center Administration</a>
- </li>
-<li class="page_item page-item-7644">
-<a class="level_2" href="http://www.bu.edu/researchsupport/tools-services/sponsored-research-reporting/" title="Navigate to: Sponsored Research Reporting">Sponsored Research Reporting</a>
- </li>
-<li class="page_item page-item-9460">
-<a class="level_2" href="http://www.bu.edu/researchsupport/tools-services/team-science/" title="Navigate to: Team Science">Team Science</a>
- </li>
-<li class="page_item page-item-9462">
-<a class="level_2" href="http://www.bu.edu/researchsupport/tools-services/translational-research/" title="Navigate to: Translational Research">Translational Research</a>
- </li>
-<li class="page_item page-item-575">
-<a class="level_2" href="http://www.bu.edu/researchsupport/tools-services/property-management/" title="Navigate to: Property Management Manual">Property Management Manual</a>
- </li>
-<li class="page_item page-item-4326">
-<a class="level_2" href="http://www.bu.edu/researchsupport/tools-services/public-health-service-agencies/" title="Navigate to: Public Health Service Agencies">Public Health Service Agencies</a>
- </li>
-
-</ul>
-</li>
-<li class="page_item page-item-599">
-<a class="level_1" href="http://www.bu.edu/researchsupport/news-calendar/" title="Navigate to: News &amp; Calendar">News &amp; Calendar</a>
- 
-<ul>
-<li class="page_item page-item-3773">
-<a class="level_2" href="http://www.bu.edu/researchsupport/news-calendar/announcements/" title="Navigate to: Announcements">Announcements</a>
- </li>
-<li class="page_item page-item-597">
-<a class="level_2" href="http://www.bu.edu/researchsupport/news-calendar/calendar/" title="Navigate to: Calendar">Calendar</a>
- </li>
-
-</ul>
-</li>
-<li class="page_item page-item-3386">
-<a class="level_1" href="http://www.bu.edu/researchsupport/contact/" title="Navigate to: Contact">Contact</a>
- 
-<ul>
-<li class="page_item page-item-8359">
-<a class="level_2" href="http://www.bu.edu/researchsupport/contact/announcement-signups/" title="Navigate to: Announcement Signups">Announcement Signups</a>
- </li>
-<li class="page_item page-item-3378">
-<a class="level_2" href="http://www.bu.edu/researchsupport/contact/contact-us/" title="Navigate to: Contact us">Contact us</a>
- </li>
-<li class="page_item page-item-3408">
-<a class="level_2" href="http://www.bu.edu/researchsupport/contact/directory/" title="Navigate to: Directory">Directory</a>
- </li>
-<li class="page_item page-item-3382">
-<a class="level_2" href="http://www.bu.edu/researchsupport/contact/feedback/" title="Navigate to: Feedback">Feedback</a>
- </li>
-<li class="page_item page-item-3406">
-<a class="level_2" href="http://www.bu.edu/researchsupport/contact/departmental-contacts/" title="Navigate to: Find your Department and Research Administrators">Find your Department and Research Administrators</a>
- </li>
-<li class="page_item page-item-3070">
-<a class="level_2" href="http://www.bu.edu/researchsupport/contact/signature-authority/" title="Navigate to: Signature Authority">Signature Authority</a>
- </li>
-
-</ul>
-</li>
-
-</ul>
-        <nav class="utilityNav" role="navigation"><ul id="utilityNav-menu" class="utilityNav-menu"><li id="menu-item-3416" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3416"><a href="http://www.bu.edu/researchsupport/administration/">Administration</a></li>
-<li id="menu-item-3908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3908"><a href="http://www.bu.edu/researchsupport/news-calendar/calendar/">Calendar</a></li>
-</ul></nav>     </nav>
+      <a class="navToggle" href="#extended-menu"><span>Menu</span></a>
+      {{ page.navigation_collapsible }}
     </div>
+ 
+      <div class="content">
+        {% block main %}
 
+        {% if page.breadcrumbs %}
+        <section class="breadcrumbs">
+          <div id="breadcrumbs">
+            {{ page.breadcrumbs }}
+          </div>
+
+    {% if page.highlighted %}
+    {% block highlighted %}
+      {% spaceless %}
+      <div class="highlighted">{{ page.highlighted }}</div>
+      {% endspaceless %}
+    {% endblock %}
+  {% endif %}
+
+    {# Help #}
+    {% if page.help %}
+      {% block help %}
+        {{ page.help }}
+      {% endblock %}
+    {% endif %}
+
+        </section>
+        {% endif %}        
+      <section class="main-banner">
+        {% if page.page_title %}
+          <div class="title-intro">
+          <div class="profile-thumb">
+            <figure>
+              <img alt="" height="150" src="http://www.bu.edu/researchsupport/files/2016/07/banner-150x150.jpg" width="150">
+            </figure>
+          </div>
+          {{ page.page_title }}
+        </div>        
+        {% endif %}         
+        
+        <div class="option-buttons">
+          <a class="button print-page" href="javascript:window.print();">Print</a>
+        </div>
+      </section>
+      <div class="content-container">
+        <div class="row">
+
+{% if page.half_left_top or page.half_right_top %}
+  <div class="col-lg-6 col-md-6 col-sm-12">{{ page.half_left_top }}</div>
+  <div class="col-lg-6 col-md-6 col-sm-12">{{ page.half_right_top }}</div>
+  {% endif %}
+
+  {% if page.two_thirds_left_top or page.one_third_right_top %}
+  <div class="col-lg-8">{{ page.two_thirds_left_top }}</div>
+  <div class="col-lg-4">{{ page.one_third_right_top }}</div>
+  {% endif %}
+
+  {% if page.two_thirds_right_top or page.one_third_left_top %}
+  <div class="col-lg-4 col-md-6">{{ page.one_third_left_top }}</div>
+  <div class="col-lg-8 col-md-6">{{ page.two_thirds_right_top }}</div>
+  {% endif %}
+
+  {% if page.half_left or page.half_right %}
+  <div class="col-lg-6 col-md-6 col-sm-12">{{ page.half_left }}</div>
+  <div class="col-lg-6 col-md-6 col-sm-12">{{ page.half_right }}</div>
+  {% endif %}      
+
+  {% if page.triptych_left or page.triptych_center or page.triptych_right %}
+  <div class="col-lg-4">{{ page.triptych_left }}</div>  
+  <div class="col-lg-4">{{ page.triptych_center }}</div>
+  <div class="col-lg-4">{{ page.triptych_right }}</div>
+  {% endif %}        
   
-    <div{{ navbar_attributes.addClass(navbar_classes, 'masthead') }} id="navbar" role="banner">
-      {% if not navbar_attributes.hasClass(container) %}
-        <div class="{{ container }}">
-      {% endif %}
-      <div class="primaryNav">
-        {{ page.navigation }}
-        {# .btn-navbar is used as the toggle for collapsed navbar content #}
-        {% if page.navigation_collapsible %}
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-            <span class="sr-only">{{ 'Toggle navigation'|t }}</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        {% endif %}
+  {% if page.two_thirds_left or page.one_third_right %}
+  <div class="col-lg-8">{{ page.two_thirds_left }}</div>
+  <div class="col-lg-4">{{ page.one_third_right }}</div>
+  {% endif %}
+
+  {% if page.two_thirds_right or page.one_third_left %}
+  <div class="col-lg-4 col-md-6">{{ page.one_third_left }}</div>
+  <div class="col-lg-7 col-md-6">{{ page.two_thirds_right }}</div>
+  {% endif %}
+
+  {% if page.content %}
+  <div class="col-lg-12">  
+    {{ page.content }}
+  </div>
+  {% endif %}
+
+</div>
+
       </div>
 
+ 
 
-      {# Navigation (collapsible) #}
-      {% if page.navigation_collapsible %}
-        <div id="navbar-collapse" class="navbar-collapse collapse">
-          {{ page.navigation_collapsible }}
-        </div>
-      {% endif %}
-      {% if not navbar_attributes.hasClass(container) %}
-        </div>
-      {% endif %}
+  <footer class="siteFooter has-info-links" role="contentinfo">
+    <div class="back-to-top">
+      <a href="#top">&#62720;</a>
     </div>
-  {% endblock %}
-{% endif %}
-
-{# Main #}
-{% block main %}
-  <div role="main" class="main-container content js-quickedit-main-content">
-    <div class="row">
-
-      {# Header #}
-      {% if page.header %}
-        {% block header %}
-          <div class="col-sm-12" role="heading">
-            {{ page.header }}
-          </div>
-        {% endblock %}
-      {% endif %}
-
-      {# Sidebar First #}
-      {% if page.sidebar_first %}
-        {% block sidebar_first %}
-          <aside class="col-sm-3" role="complementary">
-            {{ page.sidebar_first }}
-          </aside>
-        {% endblock %}
-      {% endif %}
-
-      {# Content #}
-      {%
-        set content_classes = [
-          page.sidebar_first and page.sidebar_second ? 'col-sm-6',
-          page.sidebar_first and page.sidebar_second is empty ? 'col-sm-9',
-          page.sidebar_second and page.sidebar_first is empty ? 'col-sm-9',
-          page.sidebar_first is empty and page.sidebar_second is empty ? 'col-sm-12'
-        ]
-      %}
-      <section{{ content_attributes.addClass(content_classes) }}>
-
-        {# Highlighted #}
-        {% if page.highlighted %}
-          {% block highlighted %}
-            <div class="highlighted">{{ page.highlighted }}</div>
-          {% endblock %}
-        {% endif %}
-
-        {# Help #}
-        {% if page.help %}
-          {% block help %}
-            {{ page.help }}
-          {% endblock %}
-        {% endif %}
-
-        {# Content #}
-        {% block content %}
-          <a id="main-content"></a>
-          {{ page.content }}
-        {% endblock %}
-      </section>
-
-      {# Sidebar Second #}
-      {% if page.sidebar_second %}
-        {% block sidebar_second %}
-          <aside class="col-sm-3" role="complementary">
-            {{ page.sidebar_second }}
-          </aside>
-        {% endblock %}
-      {% endif %}
+    <div class="siteFooter-content">
+    <div id="footer-first" class="col-sm-12 col-md-6 col-lg-5">
+      {{ page.footer_first }}
+    </div>
+    
+    <div id="footer-middle" class="col-sm-12 col-md-3 col-lg-4">
+      {{ page.footer_middle }}
+    </div>
+          
+    <div id="footer-last" class="col-sm-12 col-md-3 col-lg-3">
+      {{ page.footer_last }}
     </div>
   </div>
-{% endblock %}
-
-{% if page.footer %}
-  {% block footer %}
-    <footer class="footer {{ container }}" role="contentinfo">
-      {{ page.footer }}
-    </footer>
-  {% endblock %}
-{% endif %}
+      </footer>
+ {% endblock %}
+ </div>
+  </div>

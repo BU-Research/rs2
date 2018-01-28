@@ -2,6 +2,9 @@ global-styling:
   css:
     theme:
       css/style.css: {}
+  js:
+    assets/js/concat-emoji.js: {}
+
 
 bootstrap-scripts:
   js:
