@@ -51,12 +51,18 @@
  * @see html.html.twig
  */
 #}
-{% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
-  {% if page.top_bar %}
-  <header class="masthead col-lg-12" role="banner">
-    <div class="masthead-container">
-    {{ page.top_bar }}
-    </div>
+{# Navbar #}
+{% if page.navigation or page.navigation_collapsible %}
+  {% block navbar %}
+    {%
+      set navbar_classes = [
+        'masthead',
+      ]
+    %}
+    <header{{ navbar_attributes.addClass(navbar_classes) }} role="banner">
+        <div class="masthead-container">
+        {{ page.top_bar }}
+      </div>
   <div class="overlay">
     <div class="overlay-content">
       {# Navbar #}
@@ -66,111 +72,133 @@
       <a class="navToggle" href="#extended-menu"><span>Menu</span></a>
     </div>
   </div>
-  </header>
-  {% endif %}         
-  <div class="wrapper">
-    
-    <div class="expanded-menu-container">
-      <div class="nav-sidebar rotate">
-        <span class="menu-open">Open Menu</span>
-      </div>
-      <a class="navToggle" href="#extended-menu"><span>Menu</span></a>
-      {{ page.navigation_collapsible }}
+    </header>
+  {% endblock %}
+{% endif %}
+<div class="wrapper">
+  <div class="expanded-menu-container">
+    <div class="nav-sidebar rotate">
+      <span class="menu-open">Open Menu</span>
     </div>
- 
-      <div class="content">
-        {% block main %}
+    <a class="navToggle" href="#extended-menu"><span>Menu</span></a>
 
-        {% if page.breadcrumbs %}
-        <section class="breadcrumbs">
-          <div id="breadcrumbs">
-            {{ page.breadcrumbs }}
-          </div>
-
-    {% if page.highlighted %}
-    {% block highlighted %}
-      {% spaceless %}
-      <div class="highlighted">{{ page.highlighted }}</div>
-      {% endspaceless %}
-    {% endblock %}
-  {% endif %}
-
-    {# Help #}
-    {% if page.help %}
-      {% block help %}
-        {{ page.help }}
-      {% endblock %}
-    {% endif %}
-
-        </section>
-        {% endif %}        
-      <section class="main-banner">
-        {% if page.page_title %}
-          <div class="title-intro">
-          <div class="profile-thumb">
-            <figure>
-              <img alt="" height="150" src="http://www.bu.edu/researchsupport/files/2016/07/banner-150x150.jpg" width="150">
-            </figure>
-          </div>
-          {{ page.page_title }}
-        </div>        
-        {% endif %}         
-        
-        <div class="option-buttons">
-          <a class="button print-page" href="javascript:window.print();">Print</a>
+    <nav class="primaryNav" role="navigation">
+      <a class="navToggle" href="#primaryNav-menu"><span>Menu</span></a>
+      {{ page.navigation_collapsible }}
+    </nav>
+  </div>
+  <div class="content">
+    <section class="breadcrumbs">
+      {% if page.breadcrumbs %}
+      <div id="breadcrumbs">
+        {{ page.breadcrumbs }}
+      </div>
+      {% endif %}
+    </section>
+    <section class="main-banner">
+      <div class="title-intro">
+        {{ page.title }}
+      </div>
+    </section>
+    <div class="content-container">
+      <section class="intro-text" style="background-image: url(http://www.bu.edu/researchsupport/files/2016/09/banner.jpg)">
+        <div class="content-wrap">
         </div>
       </section>
-      <div class="content-container">
-        <div class="row">
 
-{% if page.half_left_top or page.half_right_top %}
-  <div class="col-lg-6 col-md-6 col-sm-12">{{ page.half_left_top }}</div>
-  <div class="col-lg-6 col-md-6 col-sm-12">{{ page.half_right_top }}</div>
-  {% endif %}
+      {# Content #}
 
-  {% if page.two_thirds_left_top or page.one_third_right_top %}
-  <div class="col-lg-8">{{ page.two_thirds_left_top }}</div>
-  <div class="col-lg-4">{{ page.one_third_right_top }}</div>
-  {% endif %}
+      <section{{ content_attributes.addClass(content_classes) }}>
 
-  {% if page.two_thirds_right_top or page.one_third_left_top %}
-  <div class="col-lg-4 col-md-6">{{ page.one_third_left_top }}</div>
-  <div class="col-lg-8 col-md-6">{{ page.two_thirds_right_top }}</div>
-  {% endif %}
+        {# Highlighted #}
+        {% if page.highlighted %}
+          {% block highlighted %}
+            <div class="highlighted">{{ page.highlighted }}</div>
+          {% endblock %}
+        {% endif %}
 
-  {% if page.half_left or page.half_right %}
-  <div class="col-lg-6 col-md-6 col-sm-12">{{ page.half_left }}</div>
-  <div class="col-lg-6 col-md-6 col-sm-12">{{ page.half_right }}</div>
-  {% endif %}      
+        {# Help #}
+        {% if page.help %}
+          {% block help %}
+            {{ page.help }}
+          {% endblock %}
+        {% endif %}
 
-  {% if page.triptych_left or page.triptych_center or page.triptych_right %}
-  <div class="col-lg-4">{{ page.triptych_left }}</div>  
-  <div class="col-lg-4">{{ page.triptych_center }}</div>
-  <div class="col-lg-4">{{ page.triptych_right }}</div>
-  {% endif %}        
-  
-  {% if page.two_thirds_left or page.one_third_right %}
-  <div class="col-lg-8">{{ page.two_thirds_left }}</div>
-  <div class="col-lg-4">{{ page.one_third_right }}</div>
-  {% endif %}
-
-  {% if page.two_thirds_right or page.one_third_left %}
-  <div class="col-lg-4 col-md-6">{{ page.one_third_left }}</div>
-  <div class="col-lg-7 col-md-6">{{ page.two_thirds_right }}</div>
-  {% endif %}
-
-  {% if page.content %}
-  <div class="col-lg-12">  
-    {{ page.content }}
+        {# Content #}
+        {% block content %}
+          <a id="main-content"></a>
+          {{ page.content }}
+        {% endblock %}
+      </section>
+              <aside class="sidebar">
+          <div class="widget widget_bu_pages widget-1" id="bu_pages-1">
+            <div id="contentnav">
+              <ul id="contentnavlist">
+                <li class="page_item page-item-550 first_item">
+                  <a class="level_1" href="http://www.bu.edu/researchsupport/project-lifecycle/" title="Navigate to: Project Lifecycle">Project Lifecycle</a>
+                </li>
+                <li class="page_item page-item-418">
+                  <a class="level_1" href="http://www.bu.edu/researchsupport/compliance/" title="Navigate to: Compliance">Compliance</a>
+                </li>
+                <li class="page_item page-item-3390">
+                  <a class="level_1" href="http://www.bu.edu/researchsupport/formsandpolicies/" title="Navigate to: Forms &amp; Policies">Forms &amp; Policies</a>
+                </li>
+                <li class="page_item page-item-3392">
+                  <a class="level_1" href="http://www.bu.edu/researchsupport/training-how-to/" title="Navigate to: Training &amp; How To">Training &amp; How To</a>
+                </li>
+                <li class="page_item page-item-3388">
+                  <a class="level_1" href="http://www.bu.edu/researchsupport/safety/" title="Navigate to: Safety">Safety</a>
+                </li>
+                <li class="page_item page-item-571">
+                  <a class="level_1" href="http://www.bu.edu/researchsupport/tools-services/" title="Navigate to: Tools &amp; Services">Tools &amp; Services</a>
+                </li>
+                <li class="page_item page-item-599">
+                  <a class="level_1" href="http://www.bu.edu/researchsupport/news-calendar/" title="Navigate to: News &amp; Calendar">News &amp; Calendar</a>
+                </li>
+                <li class="page_item page-item-3386">
+                  <a class="level_1" href="http://www.bu.edu/researchsupport/contact/" title="Navigate to: Contact">Contact</a>
+                </li>
+                <li class="page_item page-item-3411 last_item">
+                  <a class="level_1" href="http://www.bu.edu/researchsupport/administration/" title="Navigate to: Administration">Administration</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="widget widget_bu_text widget-3" id="bu-text-3">
+            <div>
+              <h3>Reporting</h3>
+              <ul>
+                <li>
+                  <a href="/researchsupport/safety/reporting/near-miss-reporting/">Near-miss reporting</a>
+                </li>
+                <li>
+                  <a href="/researchsupport/safety/reporting/">Reporting concerns</a>
+                </li>
+                <li>
+                  <a href="/researchsupport/safety/reporting/treatment-and-accident-reporting/">Accident & Incident reporting</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="widget widget_bu_text widget-4" id="bu-text-4">
+            <div>
+              <h3>Quick References</h3>
+              <ul>
+                <li>
+                  <a href="/researchsupport/safety/emergency-information-contacts/">Emergency Contacts</a>
+                </li>
+                <li>
+                  <a href="/researchsupport/tools-services/institutional-numbers-and-rates/">Institutional Numbers and Rates</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+    </div>      
   </div>
-  {% endif %}
 
-</div>
-
-      </div>
-
- 
-
+{% if page.footer %}
+  {% block footer %}
   <footer class="siteFooter has-info-links" role="contentinfo">
     <div class="back-to-top">
       <a href="#top">&#62720;</a>
@@ -189,6 +217,5 @@
     </div>
   </div>
       </footer>
- {% endblock %}
- </div>
-  </div>
+  {% endblock %}
+{% endif %}
