@@ -1,0 +1,28 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a menu.
+ *
+ * Available variables:
+ * - menu_name: The machine name of the menu.
+ * - items: A nested list of menu items. Each menu item contains:
+ *   - attributes: HTML attributes for the menu item.
+ *   - below: The menu item child items.
+ *   - title: The menu link title.
+ *   - url: The menu link url, instance of \Drupal\Core\Url
+ *   - localized_options: Menu link localized options.
+ *
+ * @ingroup templates
+ */
+#}
+<nav class="siteFooter-links" role="navigation">
+  {% if items %}
+      <ul{{ attributes.addClass('siteFooter-links-menu') }} id="siteFooter-links-menu" >
+    {% for item in items %}
+      <li class="menu-item menu-item-type-post_type menu-item-object-page">
+        <a href="{{ item.url }}">{{ item.title }} </a>
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+</nav>

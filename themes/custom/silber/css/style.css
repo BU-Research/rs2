@@ -1989,7 +1989,7 @@ th {
 
 /* line 246, ../assets/sass/bu/_researchsupport-navigation.scss */
 .nav-sidebar {
-  position: absolute;
+  position: inherit;
   top: 110px;
   left: -43px;
   width: 130px;
