@@ -1,12 +1,7 @@
-global-styling:
+framework:
   css:
     theme:
       css/style.css: {}
-  js:
-    assets/js/concat-emoji.js: {}
-
-
-bootstrap-scripts:
   js:
     bootstrap/assets/javascripts/bootstrap/affix.js: {}
     bootstrap/assets/javascripts/bootstrap/alert.js: {}
