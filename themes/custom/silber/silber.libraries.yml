@@ -4,11 +4,7 @@ global-styling:
       css/style.css: {}
   header: true
   js:
-    assets/js/nreum.js: {}
-    assets/js/bu.js: {}
     assets/js/navToggle.js: {}
-    assets/js/typehead.js: {}
-    assets/js/wp-embed.js: {}  
   dependencies:
     - core/jquery
     - core/jquery-migrate  
