@@ -8,7 +8,10 @@
         "wikimedia/composer-merge-plugin": "^1.4",
         "drush/drush": "^9.0.0",
         "drupal/bootstrap": "^3.11",
-        "drupal/mailsystem": "^4.1"
+        "drupal/mailsystem": "^4.1",
+        "drupal/redhen": "^1.0@alpha",
+        "drupal/swiftmailer": "^1.0@beta",
+        "drupal/simplenews": "^1.0@alpha"
     },
     "replace": {
         "drupal/core": "^8.5"
