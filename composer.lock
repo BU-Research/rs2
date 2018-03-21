@@ -4,11 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-<<<<<<< HEAD
-    "content-hash": "4b9407723bda120c54b5bfeba599f2cb",
-=======
-    "content-hash": "061da13ed73017aade1de38227288707",
->>>>>>> Adds Easy Install to composer.json
+    "content-hash": "1d6e24850b771b9785e31d1d98fc49e7",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1268,7 +1264,6 @@
             }
         },
         {
-<<<<<<< HEAD
             "name": "drupal/redhen",
             "version": "1.0.0-alpha3",
             "source": {
@@ -1420,8 +1415,6 @@
             }
         },
         {
-=======
->>>>>>> Adds Easy Install to composer.json
             "name": "drupal/swiftmailer",
             "version": "1.0.0-beta2",
             "source": {
@@ -6756,13 +6749,9 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-<<<<<<< HEAD
         "drupal/redhen": 15,
         "drupal/swiftmailer": 10,
         "drupal/simplenews": 15,
-=======
-        "drupal/swiftmailer": 10,
->>>>>>> Adds Easy Install to composer.json
         "behat/mink": 20,
         "behat/mink-selenium2-driver": 20
     },
