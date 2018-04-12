@@ -12,7 +12,8 @@
         "drupal/redhen": "^1.0@alpha",
         "drupal/swiftmailer": "^1.0@beta",
         "drupal/simplenews": "^1.0@alpha",
-        "drupal/easy_install": "^10.0"
+        "drupal/easy_install": "^10.0",
+        "drupal/ds": "^3.1"
     },
     "replace": {
         "drupal/core": "^8.5"

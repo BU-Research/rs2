@@ -66,4 +66,215 @@ body {
     padding-left: 0;
   }
 }
-
+.masthead {
+  position: relative;
+  border: 1px solid $color_alto_approx;
+  border-width: 0 0 1px 0;
+  background: $white;
+  background: $color_mirage_approx;
+  border: none;
+  &:after {
+    @extend %extend_1;
+  }
+}
+.masthead-container {
+  position: relative;
+}
+.has-branding {
+  min-height: 140px;
+  .site-footer-brand {
+    width: 112px;
+    margin: 6px auto 35px;
+  }
+}
+.site-footer-bumc {
+  width: 96px;
+  margin: 6px auto 35px;
+}
+.site-footer-disclaimer {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.lt-ie9 {
+  .brand {
+    display: table;
+    > * {
+      top: auto;
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+  .brand-container {
+    top: auto;
+  }
+  .brand-site-description {
+    top: auto;
+  }
+  &:hover {
+    .siteFooter-social {
+      a[href*="dropbox.com"] i {
+      }
+      a[href*="facebook.com"] i {
+      }
+      a[href*="flickr.com"] i {
+      }
+      a[href*="foursquare.com"] i {
+      }
+      a[href*="github.com"] i {
+      }
+      a[href*="plus.google.com"] i {
+      }
+      a[href*="instagram.com"] i {
+      }
+      a[href*="kickstarter.com"] i {
+      }
+      a[href*="linkedin.com"] i {
+      }
+      a[href*="pinterest.com"] i {
+      }
+      a[href*="getpocket.com"] i {
+      }
+      a[href*="reddit.com"] i {
+      }
+      a[href*="twitter.com"] i {
+      }
+      a[href*="tumblr.com"] i {
+      }
+      a[href*="vimeo.com"] i {
+      }
+      a[href*="vine.co"] i {
+      }
+      a[href*="youtube.com"] i {
+      }
+    }
+    .searchToggle.is-open {
+    }
+  }
+  .rotate {
+    filter: progid:dximagetransform.Microsoft.BasicImage(rotation=3);
+  }
+  .overlay {
+    visibility: visible;
+    display: none;
+  }
+  .nav-open .overlay {
+    display: block;
+  }
+  .l-sideNav .navToggle {
+    position: absolute !important;
+    left: -50px !important;
+  }
+}
+.brand {
+  overflow: hidden;
+  height: 120px;
+  padding: 0 0 0 20px;
+  font-family: $font_11, $font_12, $font_0, $font_5;
+  font-size: 18px;
+  line-height: 1.3;
+  height: 78px;
+  > * {
+    position: relative;
+    top: 50%;
+    display: block;
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: translateY(-50%);
+  }
+  > {
+    .has-parent {
+      font-size: 16px;
+    }
+    .brand-unbranded {
+      font-size: inherit;
+    }
+  }
+  .searchToggle {
+    display: none;
+  }
+  .site-description {
+    float: left;
+    width: auto;
+    margin-left: 50px;
+  }
+  [class*="brand-"] {
+    color: $white;
+    &:visited {
+      color: $white;
+    }
+  }
+}
+.brand-container {
+  position: relative;
+  top: 50%;
+  //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+  transform: translateY(-50%);
+  display: block;
+  float: left;
+  font-weight: 400;
+  color: $black;
+  text-decoration: none;
+  &:visited {
+    color: $black;
+  }
+}
+.brand-site-description {
+  position: relative;
+  top: 50%;
+  //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+  transform: translateY(-50%);
+  display: none;
+}
+.brand-part-logotype {
+  font-weight: 600;
+  + {
+    & .brand-part-sitename {
+      display: inline;
+    }
+    & .brand-part-parent {
+      font-weight: 400;
+    }
+  }
+}
+.brand-unbranded {
+  font-weight: 600;
+  font-family: $font_0, $font_5;
+  font-size: 20px;
+  color: $color_guardsman_red_approx;
+  &:visited {
+    color: $color_guardsman_red_approx;
+  }
+}
+.brand-part-parent {
+  font-weight: 600;
+}
+.brand-signature {
+  padding: 10px 30px 9px 56px;
+  min-height: 35px;
+  background: $url_28 no-repeat 0 49%;
+  position: relative;
+  & .has-parent {
+    padding-top: 0;
+    padding-bottom: 0;
+    background-position: 0 3px;
+  }
+}
+@media only screen and(-webkit-min-device-pixel-ratio: 2),only screen and(min--moz-device-pixel-ratio: 2),only screen and(-o-min-device-pixel-ratio: 2 / 1),only screen and(min-device-pixel-ratio: 2),only screen and(min-resolution: 192dpi),only screen and(min-resolution: 2dppx) {
+  .brand-signature {
+    background-image: $url_29;
+    background-size: 49px 35px;
+  }
+  .brand-masterplate {
+    background-image: $url_31;
+    background-size: 112px 50px;
+  }
+  .brand-bumclogo {
+    background-image: $url_33;
+    background-size: 96px 40px;
+  }
+}
+.brand-part-sitename {
+  display: block;
+}
+.brand-part-subparent {
+  display: block;
+}
