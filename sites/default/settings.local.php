@@ -64,15 +64,7 @@ $config['system.performance']['js']['preprocess'] = FALSE;
  *
  * Do not use this setting until after the site is installed.
  */
-# $settings['cache']['bins']['render'] = 'cache.backend.null';
-
-/**
- * Disable caching for migrations.
- *
- * Uncomment the code below to only store migrations in memory and not in the
- * database. This makes it easier to develop custom migrations.
- */
-# $settings['cache']['bins']['discovery_migration'] = 'cache.backend.memory';
+$settings['cache']['bins']['render'] = 'cache.backend.null';
 
 /**
  * Disable Dynamic Page Cache.
@@ -90,7 +82,7 @@ $config['system.performance']['js']['preprocess'] = FALSE;
  * During development it can be useful to install test extensions for debugging
  * purposes.
  */
-# $settings['extension_discovery_scan_tests'] = TRUE;
+$settings['extension_discovery_scan_tests'] = TRUE;
 
 /**
  * Enable access to rebuild.php.
@@ -100,7 +92,7 @@ $config['system.performance']['js']['preprocess'] = FALSE;
  * be gained by generating a query string from rebuild_token_calculator.sh and
  * using these parameters in a request to rebuild.php.
  */
-$settings['rebuild_access'] = TRUE;
+$settings['rebuild_access'] = FALSE;
 
 /**
  * Skip file system permissions hardening.

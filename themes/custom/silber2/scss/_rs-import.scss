@@ -1,0 +1,240 @@
+//colors
+$color_gallery_approx: #f0f0f0;
+$color_star_dust_approx: #9f9f9f;
+$black: #000;
+$color_alto_approx: #ddd;
+$white: #fff;
+$color_sirocco_approx: #717b7c;
+$color_cerulean_approx: #00b3c4;
+$yellow: #ffff00;
+$color_wild_sand_approx: #f5f5f5;
+$boulder: #7a7a7a;
+$color_white_lilac_approx: #f6f9fc;
+$color_mountain_mist_approx: #999999;
+$color_tundora_approx: #444;
+$black_10: rgba(0, 0, 0, 0.1);
+$black_15: rgba(0, 0, 0, 0.15);
+$black_20: rgba(0, 0, 0, 0.2);
+$color_azure_radiance_approx: #0078e7;
+$mercury: #e5e5e5;
+$color_celeste_approx: #ccc;
+$color_cerulean_20_approx: rgba(18, 159, 234, 0.2);
+$color_mine_shaft_approx: #333;
+$color_gin_approx: #eaeded;
+$color_conch_approx: #cad2d3;
+$color_tapa_approx: #777777;
+$color_carnation_approx: #ee5f5b;
+$color_chestnut_approx: #b94a48;
+$color_alizarin_crimson_approx: #e9322d;
+$color_guardsman_red_approx: #cc0000;
+$color_suva_gray_approx: #888;
+$color_blue_chill_approx: #008491;
+$color_silver_chalice_approx: #aaa;
+$color_tuna_approx: #353c46;
+$color_hippie_blue_approx: #5f9eb5;
+$color_mercury_approx: #e5e8e7;
+$color_mirage_approx: #1f1e24;
+$alabaster: #fafafa;
+$color_aqua_haze_approx: #eff3f6;
+$gray_nurse: #e7ece6;
+$color_woodsmoke_approx: #111;
+$color_bondi_blue_approx: #009cab;
+$color_te_papa_green_approx: #243d41;
+$color_cyprus_approx: #004346;
+$color_gothic_approx: #6b9ea2;
+$color_ghost_approx: #c1ccdc;
+$color_raven_approx: #6e7988;
+$color_pistachio_approx: #8cbf01;
+$color_porcelain_approx: #eff3f3;
+$color_scarpa_flow_approx: #525a67;
+$color_limeade_approx: #678c01;
+$color_french_gray_approx: #babfc3;
+$color_gray_chateau_approx: #9fa6b0;
+$color_steel_blue_approx: #4481c6;
+$color_jungle_mist_approx: #adcfd2;
+$color_turbo_approx: #f9ed00;
+$color_nepal_approx: #90b7bc;
+$color_nevada_approx: #607377;
+$color_bombay_approx: #b1b9bb;
+$wild_sand: #f4f4f4;
+$concrete: #f2f2f2;
+$color_milano_red_approx: #ca120e;
+$color_charade_approx: #292d36;
+$black_25: rgba(0, 0, 0, 0.25);
+$color_pickled_bluewood_approx: #34495e;
+$color_bright_gray_approx: #39414c;
+$color_hit_gray_approx: #a3adbb;
+$color_trout_approx: #4b5563;
+$color_regent_gray_approx: #7f889c;
+$color_pattens_blue_approx: #dff7fd;
+$color_shadow_green_approx: #93b7bb;
+$color_gray_approx: #7d827d;
+$silver: #c0c0c0;
+$color_fuscous_gray_approx: #555;
+$color_cornflower_blue_approx: #66afe9;
+$color_masala_approx: #3b3b3b;
+$color_tropical_blue_approx: #bfdef6;
+$color_matisse_approx: #17639f;
+$color_zumthor_approx: #ecf5fc;
+$black_35: rgba(0, 0, 0, 0.35);
+
+//fonts
+$font_0: Benton;
+$font_1: TiemposText;
+$font_2: bu-default-icons;
+$font_3: research-icons;
+$font_4: BU-Default-Icons;
+$font_5: sans-serif;
+$font_6: Helvetica;
+$font_7: Consolas;
+$font_8: Liberation Mono;
+$font_9: Courier;
+$font_10: monospace;
+$font_11: Whitney SSm A;
+$font_12: Whitney SSm B;
+$font_13: research;
+$font_14: Arial;
+
+//urls
+$url_0: url(https://www.bu.edu/cdn/fonts/Benton-Sans-Regular/019c3a13-b3d7-4c5a-be27-07a8334a43e6-2.eot);
+$url_1: url(https://www.bu.edu/cdn/fonts/Benton-Sans-Regular/019c3a13-b3d7-4c5a-be27-07a8334a43e6-2.eot?);
+$url_2: url(https://www.bu.edu/cdn/fonts/Benton-Sans-Regular/019c3a13-b3d7-4c5a-be27-07a8334a43e6-3.woff);
+$url_3: url(https://www.bu.edu/cdn/fonts/Benton-Sans-Regular/019c3a13-b3d7-4c5a-be27-07a8334a43e6-1.ttf);
+$url_4: url(https://www.bu.edu/cdn/fonts/Benton-Sans-Regular-Italic/3295fa07-2a3f-4cd1-ba86-e06161453a51-2.eot);
+$url_5: url(https://www.bu.edu/cdn/fonts/Benton-Sans-Regular-Italic/3295fa07-2a3f-4cd1-ba86-e06161453a51-2.eot?);
+$url_6: url(https://www.bu.edu/cdn/fonts/Benton-Sans-Regular-Italic/3295fa07-2a3f-4cd1-ba86-e06161453a51-3.woff);
+$url_7: url(https://www.bu.edu/cdn/fonts/Benton-Sans-Regular-Italic/3295fa07-2a3f-4cd1-ba86-e06161453a51-1.ttf);
+$url_8: url(https://www.bu.edu/cdn/fonts/Benton-Sans-Bold/d4a4a960-2cf2-430e-8b13-cbf6f261ddb9-2.eot);
+$url_9: url(https://www.bu.edu/cdn/fonts/Benton-Sans-Bold/d4a4a960-2cf2-430e-8b13-cbf6f261ddb9-2.eot?);
+$url_10: url(https://www.bu.edu/cdn/fonts/Benton-Sans-Bold/d4a4a960-2cf2-430e-8b13-cbf6f261ddb9-3.woff);
+$url_11: url(https://www.bu.edu/cdn/fonts/Benton-Sans-Bold/d4a4a960-2cf2-430e-8b13-cbf6f261ddb9-1.ttf);
+$url_12: url(https://www.bu.edu/cdn/fonts/Benton-Sans-Bold-Italic/f037bfb1-69d7-4441-8d43-3b8c2c6e77d3-2.eot);
+$url_13: url(https://www.bu.edu/cdn/fonts/Benton-Sans-Bold-Italic/f037bfb1-69d7-4441-8d43-3b8c2c6e77d3-2.eot?);
+$url_14: url(https://www.bu.edu/cdn/fonts/Benton-Sans-Bold-Italic/f037bfb1-69d7-4441-8d43-3b8c2c6e77d3-3.woff);
+$url_15: url(https://www.bu.edu/cdn/fonts/Benton-Sans-Bold-Italic/f037bfb1-69d7-4441-8d43-3b8c2c6e77d3-1.ttf);
+$url_16: url(https://www.bu.edu/cdn/fonts/TiemposText/TiemposText-Regular.eot);
+$url_17: url(https://www.bu.edu/cdn/fonts/TiemposText/TiemposText-Regular.eot?#iefix);
+$url_18: url(https://www.bu.edu/cdn/fonts/TiemposText/TiemposText-Regular.woff);
+$url_19: url(https://www.bu.edu/cdn/fonts/TiemposText/TiemposText-Regular-Italic.eot);
+$url_20: url(https://www.bu.edu/cdn/fonts/TiemposText/TiemposText-Regular-Italic.eot?#iefix);
+$url_21: url(https://www.bu.edu/cdn/fonts/TiemposText/TiemposText-Regular-Italic.woff);
+$url_22: url(https://www.bu.edu/cdn/fonts/TiemposText/TiemposText-Semibold.eot);
+$url_23: url(https://www.bu.edu/cdn/fonts/TiemposText/TiemposText-Semibold.eot?#iefix);
+$url_24: url(https://www.bu.edu/cdn/fonts/TiemposText/TiemposText-Semibold.woff);
+$url_25: url(https://www.bu.edu/cdn/fonts/TiemposText/TiemposText-Semibold-Italic.eot);
+$url_26: url(https://www.bu.edu/cdn/fonts/TiemposText/TiemposText-Semibold-Italic.eot?#iefix);
+$url_27: url(https://www.bu.edu/cdn/fonts/TiemposText/TiemposText-Semibold-Italic.woff);
+$url_28: url(https://www.bu.edu/cdn/images/logos/subbrand49x35.png);
+$url_29: url(https://www.bu.edu/cdn/images/logos/subbrand49x35-retina.png);
+$url_30: url(https://www.bu.edu/cdn/images/logos/masterplate112x50.png);
+$url_31: url(https://www.bu.edu/cdn/images/logos/masterplate112x50-retina.png);
+$url_32: url(https://www.bu.edu/cdn/images/logos/bumclogo96x40.png);
+$url_33: url(https://www.bu.edu/cdn/images/logos/bumclogo96x40-retina.png);
+$url_34: url(https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.eot?);
+$url_35: url(https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.woff);
+$url_36: url(https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.ttf);
+$url_37: url(https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.svg#bu-default-icons);
+$url_38: url(/wp-content/themes/r-researchsupport/fonts/font/research-icons.eot?68742951);
+$url_39: url(/wp-content/themes/r-researchsupport/fonts/font/research-icons.eot?68742951#iefix);
+$url_40: url(/wp-content/themes/r-researchsupport/fonts/font/research-icons.woff?68742951);
+$url_41: url(/wp-content/themes/r-researchsupport/fonts/font/research-icons.ttf?68742951);
+$url_42: url(/wp-content/themes/r-researchsupport/fonts/font/research-icons.svg?68742951#research-icons);
+$url_43: url(https://www.bu.edu/cdn/fonts/Benton-Sans-Light/1d3e1be9-e2ca-44c3-b674-7228a7c97407-2.eot);
+$url_44: url(https://www.bu.edu/cdn/fonts/Benton-Sans-Light/1d3e1be9-e2ca-44c3-b674-7228a7c97407-2.eot?);
+$url_45: url(https://www.bu.edu/cdn/fonts/Benton-Sans-Light/1d3e1be9-e2ca-44c3-b674-7228a7c97407-3.woff);
+$url_46: url(https://www.bu.edu/cdn/fonts/Benton-Sans-Light/1d3e1be9-e2ca-44c3-b674-7228a7c97407-1.ttf);
+$url_47: url(https://www.bu.edu/cdn/fonts/Benton-Sans-Light-Italic/15a2d62b-ca5c-45cb-9b3d-29bef80c6e9d-2.eot);
+$url_48: url(https://www.bu.edu/cdn/fonts/Benton-Sans-Light-Italic/15a2d62b-ca5c-45cb-9b3d-29bef80c6e9d-2.eot?);
+$url_49: url(https://www.bu.edu/cdn/fonts/Benton-Sans-Light-Italic/15a2d62b-ca5c-45cb-9b3d-29bef80c6e9d-3.woff);
+$url_50: url(https://www.bu.edu/cdn/fonts/Benton-Sans-Light-Italic/15a2d62b-ca5c-45cb-9b3d-29bef80c6e9d-1.ttf);
+$url_51: url(https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.eot);
+$url_52: url(https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.eot?#iefix);
+$url_53: url(images/banner.jpg);
+$url_54: url(images/cycle-bg.jpg);
+$url_55: url(images/icon-bg-sm.png);
+$url_56: url(data:image/svg+xml;charset=utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCIgdmlld0JveD0iMCAwIDQzOC41MzMgNDM4LjUzMyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDM4LjUzMyA0MzguNTMzOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBhdGggZD0iTTQwOS4xMzMsMTA5LjIwM2MtMTkuNjA4LTMzLjU5Mi00Ni4yMDUtNjAuMTg5LTc5Ljc5OC03OS43OTZDMjk1LjczNiw5LjgwMSwyNTkuMDU4LDAsMjE5LjI3MywwICAgYy0zOS43ODEsMC03Ni40Nyw5LjgwMS0xMTAuMDYzLDI5LjQwN2MtMzMuNTk1LDE5LjYwNC02MC4xOTIsNDYuMjAxLTc5LjgsNzkuNzk2QzkuODAxLDE0Mi44LDAsMTc5LjQ4OSwwLDIxOS4yNjcgICBjMCwzOS43OCw5LjgwNCw3Ni40NjMsMjkuNDA3LDExMC4wNjJjMTkuNjA3LDMzLjU5Miw0Ni4yMDQsNjAuMTg5LDc5Ljc5OSw3OS43OThjMzMuNTk3LDE5LjYwNSw3MC4yODMsMjkuNDA3LDExMC4wNjMsMjkuNDA3ICAgczc2LjQ3LTkuODAyLDExMC4wNjUtMjkuNDA3YzMzLjU5My0xOS42MDIsNjAuMTg5LTQ2LjIwNiw3OS43OTUtNzkuNzk4YzE5LjYwMy0zMy41OTYsMjkuNDAzLTcwLjI4NCwyOS40MDMtMTEwLjA2MiAgIEM0MzguNTMzLDE3OS40ODUsNDI4LjczMiwxNDIuNzk1LDQwOS4xMzMsMTA5LjIwM3ogTTMyMi42MjEsMjcwLjkzOWMzLjYxNywzLjYxMyw1LjQyOCw3LjkwNSw1LjQyOCwxMi44NTQgICBjMCw1LjEzMy0xLjgxMSw5LjUxNC01LjQyOCwxMy4xMjdsLTI1LjY5MywyNS43MDFjLTMuNjE0LDMuNjEzLTcuOTk0LDUuNDItMTMuMTM1LDUuNDJjLTQuOTQ4LDAtOS4yMzYtMS44MDctMTIuODQ3LTUuNDIgICBsLTUxLjY3Ni01MS42ODJsLTUxLjY3OCw1MS42ODJjLTMuNjE2LDMuNjEzLTcuODk4LDUuNDItMTIuODQ3LDUuNDJjLTUuMTQsMC05LjUxNy0xLjgwNy0xMy4xMzQtNS40MmwtMjUuNjk3LTI1LjcwMSAgIGMtMy42MTYtMy42MTMtNS40MjQtNy45OTQtNS40MjQtMTMuMTI3YzAtNC45NDgsMS44MDktOS4yNCw1LjQyNC0xMi44NTRsNTEuNjc4LTUxLjY3M2wtNTEuNjc4LTUxLjY3OCAgIGMtMy42MTYtMy42MTItNS40MjQtNy44OTgtNS40MjQtMTIuODQ3YzAtNS4xNCwxLjgwOS05LjUxNyw1LjQyNC0xMy4xMzRsMjUuNjk3LTI1LjY5M2MzLjYxNy0zLjYxNiw3Ljk5NC01LjQyNCwxMy4xMzQtNS40MjQgICBjNC45NDksMCw5LjIzMSwxLjgwOSwxMi44NDcsNS40MjRsNTEuNjc4LDUxLjY3NGw1MS42NzYtNTEuNjc0YzMuNjEtMy42MTYsNy44OTgtNS40MjQsMTIuODQ3LTUuNDI0ICAgYzUuMTQxLDAsOS41MjEsMS44MDksMTMuMTM1LDUuNDI0bDI1LjY5MywyNS42OTNjMy42MTcsMy42MTcsNS40MjgsNy45OTQsNS40MjgsMTMuMTM0YzAsNC45NDgtMS44MTEsOS4yMzUtNS40MjgsMTIuODQ3ICAgbC01MS42NzUsNTEuNjc4TDMyMi42MjEsMjcwLjkzOXoiIGZpbGw9IiM1NTU1NTUiLz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K);
+
+%extend_1 {
+	display: table;
+	clear: both;
+	content: "";
+}
+//Css for the wrapper
+.wrapper {
+	overflow: hidden;
+}
+
+//This places style for the expanded menu container.
+@media screen and(min-width: 768px) {
+	.expanded-menu-container {
+		display: block;
+		position: absolute;
+		height: 100%;
+		width: auto;
+	}
+	.wrapper .searchToggle {
+		display: none;
+	}
+}
+@media screen and(max-width: 768px) {
+	.searchToggle {
+		top: 73px !important;
+		position: absolute;
+		right: 0;
+		font-size: 21px;
+	}
+	.expanded-menu-container {
+		.navToggle {
+			display: none;
+		}
+		.primaryNav .navToggle {
+			display: block;
+		}
+	}
+	.search-open .searchToggle {
+		top: 184px !important;
+		position: absolute;
+		right: 0;
+		font-size: 21px;
+	}
+}
+.expanded-menu-container {
+	background: $color_charade_approx;
+	z-index: 900;
+	width: 100%;
+	left: 0;
+	z-index: 8000;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 6px 6px 0 $black_25;
+	.navToggle {
+		display: block;
+	}
+	.toggle {
+		display: block;
+		height: 100%;
+		width: 46px;
+	}
+	.primaryNav .navToggle {
+		display: none;
+	}
+}
+.nav-open {
+	.expanded-menu-container {
+		top: 0;
+	}
+	.overlay {
+		left: 0;
+		overflow-y: scroll;
+		overflow: scroll;
+	}
+	.menu-open {
+		display: none;
+	}
+	.menu-close {
+		display: block;
+	}
+	#wpadminbar {
+		height: 0;
+		display: none;
+	}
+}

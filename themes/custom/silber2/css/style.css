@@ -10,6 +10,176 @@
  * You can copy existing variables directly from the following file:
  * ./THEMENAME/bootstrap/assets/stylesheets/bootstrap/_variables.scss
  */
+/* line 157, ../scss/_rs-import.scss */
+.masthead:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+/* line 163, ../scss/_rs-import.scss */
+.wrapper {
+  overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  /* line 169, ../scss/_rs-import.scss */
+  .expanded-menu-container {
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: auto;
+  }
+
+  /* line 175, ../scss/_rs-import.scss */
+  .wrapper .searchToggle {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 180, ../scss/_rs-import.scss */
+  .searchToggle {
+    top: 73px !important;
+    position: absolute;
+    right: 0;
+    font-size: 21px;
+  }
+
+  /* line 187, ../scss/_rs-import.scss */
+  .expanded-menu-container .navToggle {
+    display: none;
+  }
+  /* line 190, ../scss/_rs-import.scss */
+  .expanded-menu-container .primaryNav .navToggle {
+    display: block;
+  }
+
+  /* line 194, ../scss/_rs-import.scss */
+  .search-open .searchToggle {
+    top: 184px !important;
+    position: absolute;
+    right: 0;
+    font-size: 21px;
+  }
+}
+/* line 201, ../scss/_rs-import.scss */
+.expanded-menu-container {
+  background: #292d36;
+  z-index: 900;
+  width: 100%;
+  left: 0;
+  z-index: 8000;
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.25);
+}
+/* line 209, ../scss/_rs-import.scss */
+.expanded-menu-container .navToggle {
+  display: block;
+}
+/* line 212, ../scss/_rs-import.scss */
+.expanded-menu-container .toggle {
+  display: block;
+  height: 100%;
+  width: 46px;
+}
+/* line 217, ../scss/_rs-import.scss */
+.expanded-menu-container .primaryNav .navToggle {
+  display: none;
+}
+
+/* line 222, ../scss/_rs-import.scss */
+.nav-open .expanded-menu-container {
+  top: 0;
+}
+/* line 225, ../scss/_rs-import.scss */
+.nav-open .overlay {
+  left: 0;
+  overflow-y: scroll;
+  overflow: scroll;
+}
+/* line 230, ../scss/_rs-import.scss */
+.nav-open .menu-open {
+  display: none;
+}
+/* line 233, ../scss/_rs-import.scss */
+.nav-open .menu-close {
+  display: block;
+}
+/* line 236, ../scss/_rs-import.scss */
+.nav-open #wpadminbar {
+  height: 0;
+  display: none;
+}
+
+/* The side navigation menu */
+/* line 2, ../scss/_bootstrap-sidenav.scss */
+.sidenav {
+  height: 100%;
+  /* 100% Full-height */
+  width: 0;
+  /* 0 width - change this with JavaScript */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Stay on top */
+  top: 0;
+  /* Stay at the top */
+  left: 0;
+  background-color: #111;
+  /* Black*/
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  padding-top: 60px;
+  /* Place content 60px from the top */
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+/* line 16, ../scss/_bootstrap-sidenav.scss */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+/* line 26, ../scss/_bootstrap-sidenav.scss */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+/* line 31, ../scss/_bootstrap-sidenav.scss */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+/* line 40, ../scss/_bootstrap-sidenav.scss */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  /* line 47, ../scss/_bootstrap-sidenav.scss */
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  /* line 48, ../scss/_bootstrap-sidenav.scss */
+  .sidenav a {
+    font-size: 18px;
+  }
+}
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -5621,7 +5791,7 @@ tbody.collapse.in {
 /* line 11, ../bootstrap/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar {
   position: relative;
-  min-height: 78px;
+  min-height: 50px;
   margin-bottom: 20px;
   border: 1px solid transparent;
 }
@@ -5780,10 +5950,10 @@ tbody.collapse.in {
 /* line 163, ../bootstrap/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-brand {
   float: left;
-  padding: 29px 15px;
+  padding: 15px 15px;
   font-size: 18px;
   line-height: 20px;
-  height: 78px;
+  height: 50px;
 }
 /* line 170, ../bootstrap/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-brand:hover, .navbar-brand:focus {
@@ -5806,8 +5976,8 @@ tbody.collapse.in {
   float: right;
   margin-right: 15px;
   padding: 9px 10px;
-  margin-top: 22px;
-  margin-bottom: 22px;
+  margin-top: 8px;
+  margin-bottom: 8px;
   background-color: transparent;
   background-image: none;
   border: 1px solid transparent;
@@ -5837,7 +6007,7 @@ tbody.collapse.in {
 
 /* line 232, ../bootstrap/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-nav {
-  margin: 14.5px -15px;
+  margin: 7.5px -15px;
 }
 /* line 235, ../bootstrap/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-nav > li > a {
@@ -5882,8 +6052,8 @@ tbody.collapse.in {
   }
   /* line 272, ../bootstrap/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-nav > li > a {
-    padding-top: 29px;
-    padding-bottom: 29px;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 }
 
@@ -5896,8 +6066,8 @@ tbody.collapse.in {
   border-bottom: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-  margin-top: 22px;
-  margin-bottom: 22px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 @media (min-width: 768px) {
   /* line 478, ../bootstrap/assets/stylesheets/bootstrap/_forms.scss */
@@ -6002,24 +6172,24 @@ tbody.collapse.in {
 
 /* line 343, ../bootstrap/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-btn {
-  margin-top: 22px;
-  margin-bottom: 22px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 /* line 346, ../bootstrap/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn {
-  margin-top: 24px;
-  margin-bottom: 24px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 /* line 349, ../bootstrap/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn {
-  margin-top: 28px;
-  margin-bottom: 28px;
+  margin-top: 14px;
+  margin-bottom: 14px;
 }
 
 /* line 359, ../bootstrap/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-text {
-  margin-top: 29px;
-  margin-bottom: 29px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 @media (min-width: 768px) {
   /* line 359, ../bootstrap/assets/stylesheets/bootstrap/_navbar.scss */
@@ -6048,8 +6218,8 @@ tbody.collapse.in {
 }
 /* line 397, ../bootstrap/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default {
-  background-color: #1f1e24;
-  border-color: #0f0f12;
+  background-color: #f8f8f8;
+  border-color: #e7e7e7;
 }
 /* line 401, ../bootstrap/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-brand {
@@ -6062,7 +6232,7 @@ tbody.collapse.in {
 }
 /* line 410, ../bootstrap/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-text {
-  color: #fff;
+  color: #777;
 }
 /* line 415, ../bootstrap/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-nav > li > a {
@@ -6076,7 +6246,7 @@ tbody.collapse.in {
 /* line 425, ../bootstrap/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
   color: #555;
-  background-color: #0f0f12;
+  background-color: #e7e7e7;
 }
 /* line 433, ../bootstrap/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-nav > .disabled > a, .navbar-default .navbar-nav > .disabled > a:hover, .navbar-default .navbar-nav > .disabled > a:focus {
@@ -6098,11 +6268,11 @@ tbody.collapse.in {
 /* line 453, ../bootstrap/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
-  border-color: #0f0f12;
+  border-color: #e7e7e7;
 }
 /* line 462, ../bootstrap/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-  background-color: #0f0f12;
+  background-color: #e7e7e7;
   color: #555;
 }
 @media (max-width: 767px) {
@@ -6118,7 +6288,7 @@ tbody.collapse.in {
   /* line 482, ../bootstrap/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #555;
-    background-color: #0f0f12;
+    background-color: #e7e7e7;
   }
   /* line 490, ../bootstrap/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
@@ -9157,11 +9327,11 @@ body.navbar-is-static-top {
 }
 /* line 18, ../scss/component/_navbar.scss */
 body.navbar-is-fixed-top {
-  margin-top: 93px;
+  margin-top: 65px;
 }
 /* line 21, ../scss/component/_navbar.scss */
 body.navbar-is-fixed-bottom {
-  padding-bottom: 93px;
+  padding-bottom: 65px;
 }
 @media screen and (min-width: 768px) {
   /* line 10, ../scss/component/_navbar.scss */
@@ -9215,6 +9385,221 @@ body.navbar-is-fixed-bottom {
     margin-right: 0;
     padding-left: 0;
   }
+}
+
+/* line 69, ../scss/component/_navbar.scss */
+.masthead {
+  position: relative;
+  border: 1px solid #ddd;
+  border-width: 0 0 1px 0;
+  background: #fff;
+  background: #1f1e24;
+  border: none;
+}
+
+/* line 80, ../scss/component/_navbar.scss */
+.masthead-container {
+  position: relative;
+}
+
+/* line 83, ../scss/component/_navbar.scss */
+.has-branding {
+  min-height: 140px;
+}
+/* line 85, ../scss/component/_navbar.scss */
+.has-branding .site-footer-brand {
+  width: 112px;
+  margin: 6px auto 35px;
+}
+
+/* line 90, ../scss/component/_navbar.scss */
+.site-footer-bumc {
+  width: 96px;
+  margin: 6px auto 35px;
+}
+
+/* line 94, ../scss/component/_navbar.scss */
+.site-footer-disclaimer {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* line 99, ../scss/component/_navbar.scss */
+.lt-ie9 .brand {
+  display: table;
+}
+/* line 101, ../scss/component/_navbar.scss */
+.lt-ie9 .brand > * {
+  top: auto;
+  display: table-cell;
+  vertical-align: middle;
+}
+/* line 107, ../scss/component/_navbar.scss */
+.lt-ie9 .brand-container {
+  top: auto;
+}
+/* line 110, ../scss/component/_navbar.scss */
+.lt-ie9 .brand-site-description {
+  top: auto;
+}
+/* line 153, ../scss/component/_navbar.scss */
+.lt-ie9 .rotate {
+  filter: progid:dximagetransform.Microsoft.BasicImage(rotation=3);
+}
+/* line 156, ../scss/component/_navbar.scss */
+.lt-ie9 .overlay {
+  visibility: visible;
+  display: none;
+}
+/* line 160, ../scss/component/_navbar.scss */
+.lt-ie9 .nav-open .overlay {
+  display: block;
+}
+/* line 163, ../scss/component/_navbar.scss */
+.lt-ie9 .l-sideNav .navToggle {
+  position: absolute !important;
+  left: -50px !important;
+}
+
+/* line 168, ../scss/component/_navbar.scss */
+.brand {
+  overflow: hidden;
+  height: 120px;
+  padding: 0 0 0 20px;
+  font-family: Whitney SSm A, Whitney SSm B, Benton, sans-serif;
+  font-size: 18px;
+  line-height: 1.3;
+  height: 78px;
+}
+/* line 176, ../scss/component/_navbar.scss */
+.brand > * {
+  position: relative;
+  top: 50%;
+  display: block;
+  transform: translateY(-50%);
+}
+/* line 184, ../scss/component/_navbar.scss */
+.brand > .has-parent {
+  font-size: 16px;
+}
+/* line 187, ../scss/component/_navbar.scss */
+.brand > .brand-unbranded {
+  font-size: inherit;
+}
+/* line 191, ../scss/component/_navbar.scss */
+.brand .searchToggle {
+  display: none;
+}
+/* line 194, ../scss/component/_navbar.scss */
+.brand .site-description {
+  float: left;
+  width: auto;
+  margin-left: 50px;
+}
+/* line 199, ../scss/component/_navbar.scss */
+.brand [class*="brand-"] {
+  color: #fff;
+}
+/* line 201, ../scss/component/_navbar.scss */
+.brand [class*="brand-"]:visited {
+  color: #fff;
+}
+
+/* line 206, ../scss/component/_navbar.scss */
+.brand-container {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  float: left;
+  font-weight: 400;
+  color: #000;
+  text-decoration: none;
+}
+/* line 216, ../scss/component/_navbar.scss */
+.brand-container:visited {
+  color: #000;
+}
+
+/* line 220, ../scss/component/_navbar.scss */
+.brand-site-description {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+}
+
+/* line 227, ../scss/component/_navbar.scss */
+.brand-part-logotype {
+  font-weight: 600;
+}
+/* line 230, ../scss/component/_navbar.scss */
+.brand-part-logotype + .brand-part-sitename {
+  display: inline;
+}
+/* line 233, ../scss/component/_navbar.scss */
+.brand-part-logotype + .brand-part-parent {
+  font-weight: 400;
+}
+
+/* line 238, ../scss/component/_navbar.scss */
+.brand-unbranded {
+  font-weight: 600;
+  font-family: Benton, sans-serif;
+  font-size: 20px;
+  color: #cc0000;
+}
+/* line 243, ../scss/component/_navbar.scss */
+.brand-unbranded:visited {
+  color: #cc0000;
+}
+
+/* line 247, ../scss/component/_navbar.scss */
+.brand-part-parent {
+  font-weight: 600;
+}
+
+/* line 250, ../scss/component/_navbar.scss */
+.brand-signature {
+  padding: 10px 30px 9px 56px;
+  min-height: 35px;
+  background: url(https://www.bu.edu/cdn/images/logos/subbrand49x35.png) no-repeat 0 49%;
+  position: relative;
+}
+/* line 255, ../scss/component/_navbar.scss */
+.brand-signature .has-parent {
+  padding-top: 0;
+  padding-bottom: 0;
+  background-position: 0 3px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 262, ../scss/component/_navbar.scss */
+  .brand-signature {
+    background-image: url(https://www.bu.edu/cdn/images/logos/subbrand49x35-retina.png);
+    background-size: 49px 35px;
+  }
+
+  /* line 266, ../scss/component/_navbar.scss */
+  .brand-masterplate {
+    background-image: url(https://www.bu.edu/cdn/images/logos/masterplate112x50-retina.png);
+    background-size: 112px 50px;
+  }
+
+  /* line 270, ../scss/component/_navbar.scss */
+  .brand-bumclogo {
+    background-image: url(https://www.bu.edu/cdn/images/logos/bumclogo96x40-retina.png);
+    background-size: 96px 40px;
+  }
+}
+/* line 275, ../scss/component/_navbar.scss */
+.brand-part-sitename {
+  display: block;
+}
+
+/* line 278, ../scss/component/_navbar.scss */
+.brand-part-subparent {
+  display: block;
 }
 
 /**
