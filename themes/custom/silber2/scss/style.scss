@@ -1,11 +1,17 @@
+// Bootstrap Framework.
+@import '../bootstrap/assets/stylesheets/bootstrap/';
 // Default variables.
 @import "default-variables";
-//@import "rs-base";
-@import "rs-import";
-@import "bootstrap-sidenav";
-
-// Bootstrap Framework.
-@import '../bootstrap/assets/stylesheets/bootstrap';
+@import "rs-base";
+//@import "bootstrap-sidenav";
+//@import "researchsupport-base";
+//@import "researchsupport-components";
+//@import "researchsupport-custom";
+//@import "researchsupport-homepage";
+//@import "researchsupport-navigation";
+//@import "researchsupport-print";
+//@import "researchsupport-templates";
+//@import "researchsupport-theme";
 
 // Base-theme overrides.
 @import 'overrides';

@@ -48,6 +48,7 @@
   set body_classes = [
     'page',
     'has-bu-branding',
+    'sidebarLocation-right',
     'l-sideNav',
     logged_in ? 'user-logged-in',
     not root_path ? 'path-frontpage' : 'path-' ~ root_path|clean_class,
@@ -66,8 +67,10 @@
     <title>{{ head_title|safe_join(' | ') }}</title>
     <css-placeholder token="{{ placeholder_token|raw }}">
     <js-placeholder token="{{ placeholder_token|raw }}">
+    <link rel='stylesheet' id='bu-branding-fonts-css'  href='//cloud.typography.com/6127692/660644/css/fonts.css?ver=0.1.2' type='text/css' media='all' />
+
   </head>
-  <body{{ attributes.addClass(body_classes) }}>
+  <body{{ attributes.addClass(body_classes) }} id="top">
     <a href="#main-content" class="visually-hidden focusable skip-link">
       {{ 'Skip to main content'|t }}
     </a>
