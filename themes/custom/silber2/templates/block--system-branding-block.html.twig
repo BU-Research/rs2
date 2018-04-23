@@ -17,10 +17,6 @@
 #}
 {% block content %}
   	{% if site_name %}
-    <a class="name navbar-brand brand-signature has-title brand-container" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home"><span class="sitename brand-part-sitename">{{ site_name }}</span></a>
-  	{% endif %}
-  	
-  	{% if site_slogan %}
-    <p class="navbar-text">{{ site_slogan }}</p>
+    <a class="brand-signature has-title brand-container" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home"><span class="sitename brand-part-sitename">{{ site_name }}</span></a>
   	{% endif %}
 {% endblock %}

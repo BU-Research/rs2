@@ -61,7 +61,7 @@
         'masthead',
       ]
     %}
-    <header{{ navbar_attributes.addClass(navbar_classes) }} id="navbar" role="banner">
+    <header{{ navbar_attributes.addClass(navbar_classes) }} role="banner">
       <div class="masthead-container">
         <div class="brand">
         {{ page.header }}
@@ -72,7 +72,7 @@
       <div class="overlay">
         <div class="overlay-content">
           <div class="menu-expanded-menu-container">
-            {{ page.navigation }}
+            {{ page.navigation_collapsible }}
           </div>
         </div>
       <div class="close">
@@ -101,7 +101,7 @@
   <!-- Breadcrumbs -->   
       <section class="breadcrumbs">
         <div id="breadcrumbs">
-        {{page.breadcrumbs}}
+        {{ page.breadcrumbs }}
         </div>
       </section>
   <!-- End Breadcrumbs -->   

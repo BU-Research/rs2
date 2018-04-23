@@ -1,10 +1,9 @@
+@import "compass/css3";
 // Bootstrap Framework.
-@import '../bootstrap/assets/stylesheets/bootstrap/';
-// Default variables.
-@import "default-variables";
-@import "rs-base";
-//@import "bootstrap-sidenav";
+@import "../bootstrap/assets/stylesheets/bootstrap";
+
 //@import "researchsupport-base";
+@import "researchsupport-breakpoint";
 //@import "researchsupport-components";
 //@import "researchsupport-custom";
 //@import "researchsupport-homepage";
@@ -12,6 +11,9 @@
 //@import "researchsupport-print";
 //@import "researchsupport-templates";
 //@import "researchsupport-theme";
-
+@import "researchsupport-minified";
 // Base-theme overrides.
 @import 'overrides';
+// Default variables.
+@import "default-variables";
+//@import "rs-base";

@@ -139,19 +139,19 @@
 }
 
 .home .tabbed-content {
-	@include breakpoint("max-width: 1600px") {
+	@include breakpoint($maxWidth: 1600px) {
 		width: 100%;
 	}
-	@include breakpoint("min-width: 1600px") {
+	@include breakpoint($minWidth: 1600px) {
 		width: 64.06667%;
 	}
 }
 .home .link-side {
-	@include breakpoint("max-width: 1600px") {
+	@include breakpoint($maxWidth: 1600px) {
 		width: 100%;
 		margin: 2.5% 0 0 0;
 	}
-	@include breakpoint("min-width: 1600px") {
+	@include breakpoint($minWidth: 1600px) {
 		width: 30.73333%;
 	}
 }
@@ -173,7 +173,7 @@
 .cycle-text {
 	width: 100%;
 
-	@include breakpoint("min-width: 1350px") {
+	@include breakpoint($minWidth: 1350px) {
 		width: 33.33333%;
 		float: left;
 	}
@@ -191,7 +191,7 @@
 	margin: 0 auto;
 	}
 
-	@include breakpoint("min-width: 1350px") {
+	@include breakpoint($minWidth: 1350px) {
 		width: 60%;
 		float: right;
 	}
@@ -424,7 +424,7 @@ a:hover {
 	margin: 0;
 	padding: 40px;
 
-	@include breakpoint("min-width: 1600px") {
+	@include breakpoint($minWidth: 1600px) {
 		padding: 40px 0;
 	}
 	

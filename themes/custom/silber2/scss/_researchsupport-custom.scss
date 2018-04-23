@@ -86,7 +86,7 @@
 		padding: 40px;
 	}
 
-	@include breakpoint("min-width: 1750px") {
+	@include breakpoint($minWidth: 1750px) {
 		padding: 20px 0;
 	}
 }
@@ -207,7 +207,7 @@ p:empty {
 	height: 78px;
 }
 .searchToggle {
-	@include breakpoint("max-width: 768px") {
+	@include breakpoint($maxWidth: 768px) {
 			top: 73px !important;
 		    position: absolute;
 		    right: 0;
@@ -215,7 +215,7 @@ p:empty {
 	}
 }
 .search-open .searchToggle {
-	@include breakpoint("max-width: 768px") {
+	@include breakpoint($maxWidth: 768px) {
 			top: 184px !important;
 		    position: absolute;
 		    right: 0;
@@ -283,7 +283,7 @@ p:empty {
 	}
 }
 .sidebarPosts {
-	@extend %removeTemplateNarrowSidebar;
+	@extend %removeTemplateNarrowSidebar !optional;
 }
 .home .sidebar {
 	display: none;
@@ -429,7 +429,7 @@ p:empty {
 		padding: 60px;
 	}
 
-	@include breakpoint("min-width: 1750px") {
+	@include breakpoint($minWidth: 1750px) {
 		padding: 60px 0;
 	}
 }
@@ -1002,7 +1002,7 @@ input {
 	@extend %clearfix;
 	@extend %content-padding-styles;
 
-	@include breakpoint("min-width: 1800px") {
+	@include breakpoint($minWidth: 1800px) {
 	 padding: 40px 0;
 	}
 }
@@ -1019,7 +1019,7 @@ input {
 		width: 60%;
 	}
 
-	@include breakpoint("min-width: 1600px") {
+	@include breakpoint($minWidth: 1600px) {
 	 //	padding: 20px 0 0 0;
 	}
 

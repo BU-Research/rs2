@@ -77,6 +77,14 @@ $color_tropical_blue_approx: #bfdef6;
 $color_matisse_approx: #17639f;
 $color_zumthor_approx: #ecf5fc;
 $black_35: rgba(0, 0, 0, 0.35);
+$color-research-teal: #00b3c4;
+$color-research-green: #8cbf01;
+$color-research-bluegray: #353c46;
+$color-research-medgray: #717b7c;
+$color-research-slategray: #6b9ea2;
+$color-research-warmgray: #e7ece6;
+$color-lightgray-ef: #eff3f6;
+$color-research-blue: #4481c6;
 
 //fonts
 $font_0: Benton;
@@ -8487,6 +8495,14 @@ select[multiple] {
 	}
 }
 .rotate {
+	/* Safari */
+	-webkit-transform: rotate(90deg);
+	/* Firefox */
+	-moz-transform: rotate(90deg);
+	/* IE */
+	-ms-transform: rotate(90deg);
+	/* Opera */
+	-o-transform: rotate(90deg);
 }
 .hidden {
 	display: none;
@@ -10597,4 +10613,100 @@ input[type="file"]:focus {
 	z-index: 1041;
 	top: initial;
 	left: initial;
+}
+/* Side Nav */
+
+.l-sideNav ul ul {
+	margin: 0;
+}
+.primaryNav {
+	padding: 0;
+
+	.level_1 {
+		&:hover {
+			background: lighten(#292d36,5%);
+			border-left: 4px solid darken($color-research-teal,5%) !important;
+		}
+	}
+	.active,
+	.active_section {
+		background: #34495e;
+		border-left: 4px solid $color-research-teal !important;
+		color: #fff;
+	}
+	.current_page_ancestor ul,
+	.current_page_parent ul,
+	.current_page_item ul {
+		padding: 10px 10px 10px 20px;
+		background: lighten($color-research-bluegray,2%);
+	}
+	.level_2 {
+		background: transparent;
+		border-left: none !important;
+	}
+}
+.primaryNav-menu li a.active_section {
+	color: #fff;
+}
+.primaryNav-menu li .level_2.active {
+	color: $color-research-teal !important;
+}
+.primaryNav .level_2 {
+	color: #a3adbb !important;
+
+	&:hover,
+	&:focus {
+		color: $color-research-teal !important;
+	}
+}
+.l-sideNav .primaryNav {
+	left: 50px;
+
+	@include breakpoint(lg) {
+		padding: 0;
+	}
+}
+.l-sideNav .primaryNav-menu {
+	@include breakpoint(md) {
+		margin: 0;
+	}
+}
+.l-sideNav .primaryNav-menu a {
+	padding: 10px 20px;
+	color: #c3cdd8;
+}
+.l-sideNav.nav-open .content {
+	@include breakpoint(lg) {
+		margin-left: 300px;
+	}
+
+	opacity: 0.1;
+}
+.nav-sidebar {
+	position: absolute;
+    top: 110px;
+    left: -43px;
+    width: 130px;
+    height: 20px;
+    displaY: inline-block;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.nav-open .menu-open {
+	display: none;
+}
+.menu-close {
+	display: none;
+}
+.nav-open .menu-close {
+	display: block;
+}
+
+.menu {
+	  max-width: 1400px;
+	  margin: 0 auto;
+	//display: none;
 }

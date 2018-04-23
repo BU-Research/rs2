@@ -14,5 +14,6 @@ framework:
     bootstrap/assets/javascripts/bootstrap/popover.js: {}
     bootstrap/assets/javascripts/bootstrap/scrollspy.js: {}
     bootstrap/assets/javascripts/bootstrap/tab.js: {}
-    bootstrap/assets/javascripts/bootstrap/transition.js: {}
+    bootstrap/assets/javascripts/bootstrap/transition.js: {}     
+    js/nreum.js: {}
     js/navToggle.js: {}
