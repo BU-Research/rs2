@@ -367,7 +367,7 @@ h2:empty {
 		text-decoration: underline;
 		//float: left;
 
-		@include breakpoint($minWidth: 1500px) {
+		@include breakpoint("min-width:1500px") {
 			float: left;
 			width: 60%;
 		}
@@ -396,7 +396,7 @@ h2:empty {
 		color: $color-base;
 		padding: 5px 0 0 0;
 
-		@include breakpoint($minWidth: 1500px) {
+		@include breakpoint("min-width:1500px") {
 			float: right;
 			clear: none;
 			margin: 0;
@@ -441,7 +441,7 @@ h2:empty {
 		height: 52px;
 	}
 
-	@include breakpoint($minWidth: 1200px, $maxWidth: 1360px) {
+	@include breakpoint("min-width: 1200px" and "max-width: 1360px") {
 		font-size: 14px;
 	}
 }
@@ -789,10 +789,10 @@ h2:empty {
 		@include breakpoint(sm) {
 			padding: 0 40px;
 		}
-		@include breakpoint($minWidth: 992px) {
+		@include breakpoint("min-width: 992px") {
 			padding: 0 40px;
 		}
-		@include breakpoint($minWidth: 1750px) {
+		@include breakpoint("min-width: 1750px") {
 			padding: 0;
 		}
 	}
@@ -934,7 +934,7 @@ h2:empty {
 
 .post-type-archive,
 .archive {
-	@extend %removeTemplateNarrow !optional;
+	@extend %removeTemplateNarrow;
 }
 
 .post-type-archive-glossary {
@@ -966,7 +966,7 @@ h2:empty {
 ------------------------------------------ */
 
 .page-template-news {
-	@extend %removeTemplateNarrow !optional;
+	@extend %removeTemplateNarrow;
 }
 
 /* news listing */
@@ -993,7 +993,7 @@ h2:empty {
 /* news page */
 
 .single-post {
-	@extend %removeTemplateNarrow !optional;
+	@extend %removeTemplateNarrow;
 }
 .meta .post-title {
 	display: none;

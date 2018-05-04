@@ -6,7 +6,7 @@
 .expanded-menu-container .primaryNav .navToggle {
 	display: none;
 
-	@include breakpoint($maxWidth: 768px) {
+	@include breakpoint("max-width: 768px") {
 		display: block;
 	}
 }
@@ -81,7 +81,7 @@
 	.navToggle {
 		display: block;
 
-		@include breakpoint($maxWidth: 768px) {
+		@include breakpoint("max-width: 768px") {
 			//position: absolute;
 			//top: 123px;
 			display: none;
@@ -110,7 +110,7 @@
     -webkit-transition: all .4s cubic-bezier(.25, .8, .25, 1);
     transition: all .4s cubic-bezier(.25, .8, .25, 1);
 
-	@include breakpoint($maxWidth: 600px) {
+	@include breakpoint("max-width: 600px") {
 			visibility: hidden;
 			display: none;
 	}
@@ -166,7 +166,7 @@
 }
 // fix awkward column breaking in wider screens
 #menu-item-5000 {
-	@include breakpoint($minWidth: 1200px) {
+	@include breakpoint("min-width: 1200px") {
 		break-after: column; /* W3C */
 		-webkit-column-break-after: column; /* Safari & Chrome */
 		-moz-column-break-after: column; /* Firefox */
@@ -306,7 +306,7 @@
 body.nav-open {
 	overflow: hidden;
 
-	@include breakpoint($maxWidth: 600px) {
+	@include breakpoint("max-width: 600px") {
 		overflow: visible;
 	}
 }
@@ -318,7 +318,7 @@ html {
 }
 
 .wrapper .searchToggle {
-	@include breakpoint($minWidth: 768px) {
+	@include breakpoint("min-width: 768px") {
 		display: none;
 	}
 }
@@ -415,7 +415,7 @@ html {
 }
 .is-open .primaryNav-menu,
 .is-open .utilityNav {
-	@include breakpoint($minWidth: 600px) {
+	@include breakpoint("min-width: 600px") {
 			visibility: hidden;
 			display: none;
 		}
