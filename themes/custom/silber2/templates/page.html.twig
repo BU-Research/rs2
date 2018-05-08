@@ -175,43 +175,18 @@
 {% endblock %}
 <!-- End Main Content -->   
 
-<!-- Footbar -->   
-  <aside class="footbar widgetCount-3">
-
+<!-- Footbar -->
+  {% if page.footbar %}
+  <aside class="footbar">
     <div class="footbar-container">
-      <div id="text-6" class="widget widget_text widget-1">
-        <h3 class="widgetTitle">Reporting</h3>
-          <div class="textwidget">
-            <ul>
-              <li><a href="/researchsupport/safety/reporting/near-miss-reporting/">Near-Miss Reporting</a></li>
-              <li><a href="/researchsupport/safety/reporting/">Reporting Concerns</a></li>
-              <li><a href="/researchsupport/safety/reporting/treatment-and-accident-reporting/">Accident & Incident Reporting</a></li>
-            </ul>
-          </div>
-      </div>
 
-      <div id="text-7" class="widget widget_text widget-2">
-        <h3 class="widgetTitle">Emergency Response</h3>
-          <div class="textwidget">
-            <ul>
-              <li><a href="/researchsupport/safety/emergency-information-contacts/">Emergency Contacts</a></li>
-            </ul>
-          </div>
-      </div>
+  {{ page.footbar }}
 
-      <div id="text-8" class="widget widget_text widget-3">
-        <h3 class="widgetTitle">Contact</h3>
-          <div class="textwidget">
-            <ul>
-              <li><a href="/researchsupport/contact/directory/">Directory</a></li>
-              <li><a href="/researchsupport/contact/departmental-contacts/">Research and Department Administrators</a></li>
-              <li><a href="/researchsupport/contact/signature-authority/">Signature Authority</a></li>
-            </ul>
-          </div>
-      </div>
     </div>
   </aside>
+  {% endif %}
 <!-- End Footbar -->   
+
 <!-- Footer -->   
 {% if page.footer %}
   {% block footer %}

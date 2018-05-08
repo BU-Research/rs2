@@ -84,9 +84,9 @@ $zIndex-10:                                1000;
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------
 
-$fontFamily-base:                          "Benton", Helvetica, sans-serif;
-$fontFamily-sansSerif:                     "Benton", Helvetica, sans-serif !default;
-$fontFamily-monospace:                     Consolas, "Liberation Mono", Courier, monospace !default;
+$fontFamily-base:                          "Benton-Sans", Helvetica, sans-serif;
+$fontFamily-sansSerif:                     "Benton-Sans", Helvetica, sans-serif !default;
+$fontFamily-monospace:                     Consolas, 'Liberation Mono', Courier, monospace !default;
 
 $fontSize-base:                            18px !default;
 $fontSize-micro:                           11px !default;

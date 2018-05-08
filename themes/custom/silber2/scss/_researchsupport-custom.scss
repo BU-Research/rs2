@@ -12,7 +12,7 @@
 }
 
 @font-face {
-  font-family: "Benton";
+  font-family: "Benton-Sans";
   src: url("https://www.bu.edu/cdn/fonts/Benton-Sans-Light/1d3e1be9-e2ca-44c3-b674-7228a7c97407-2.eot");
   src: url("https://www.bu.edu/cdn/fonts/Benton-Sans-Light/1d3e1be9-e2ca-44c3-b674-7228a7c97407-2.eot?") format("embedded-opentype"),
        url("https://www.bu.edu/cdn/fonts/Benton-Sans-Light/1d3e1be9-e2ca-44c3-b674-7228a7c97407-3.woff") format("woff"),
@@ -22,7 +22,7 @@
 }
 
 @font-face {
-  font-family: "Benton";
+  font-family: "Benton-Sans";
   src: url("https://www.bu.edu/cdn/fonts/Benton-Sans-Light-Italic/15a2d62b-ca5c-45cb-9b3d-29bef80c6e9d-2.eot");
   src: url("https://www.bu.edu/cdn/fonts/Benton-Sans-Light-Italic/15a2d62b-ca5c-45cb-9b3d-29bef80c6e9d-2.eot?") format("embedded-opentype"),
        url("https://www.bu.edu/cdn/fonts/Benton-Sans-Light-Italic/15a2d62b-ca5c-45cb-9b3d-29bef80c6e9d-3.woff") format("woff"),
@@ -146,7 +146,8 @@
 	.icon-flask,
 	.icon-calculator,
 	.icon-clipboard,
-	.icon-users {
+	.icon-users,
+	.icon-megaphone {
 		float: left;
 		clear: both;
 	}
@@ -510,6 +511,7 @@ a {
 	@include transition(all, 0.2s, ease-in-out, 0s);
 }
 body {
+	font-family: $fontFamily-base;
 	font-size: 16px;
 	line-height: 1.5;
 
@@ -969,6 +971,7 @@ input {
 .icon-pen:before { content: '\e808'; font-family: "research-icons"; } /* '' */
 .icon-printer:before { content: '\e809'; font-family: "research-icons"; } /* '' */
 .icon-users:before { content: '\e80a'; font-family: "research-icons"; } /* '' */
+.icon-megaphone:before { content: '\1F4E2'; font-family: "BU-Default-Icons"; } /* '' */
 
 
 /* Default pages

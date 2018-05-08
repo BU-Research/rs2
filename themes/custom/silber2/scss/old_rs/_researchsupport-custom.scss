@@ -408,7 +408,7 @@ p:empty {
 	}
 	.widgetTitle {
 		margin-bottom: 20px;
-		font-weight: 600;
+		font-weight: 700;
 
 		a {
 			color: $color-research-bluegray;
@@ -506,10 +506,12 @@ h5 {
 .content-container strong {
 	color: $color-research-bluegray;
 }
-a {
-	@include transition(all, 0.2s, ease-in-out, 0s);
-}
+
 body {
+	a {
+		color: $color-research-teal;
+		@include transition(all, 0.2s, ease-in-out, 0s);
+	}
 	font-size: 16px;
 	line-height: 1.5;
 

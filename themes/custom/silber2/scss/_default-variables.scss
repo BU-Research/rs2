@@ -17,3 +17,35 @@ $icon-font-path: '../bootstrap/assets/fonts/bootstrap/';
 //$navbar-default-bg:                #1f1e24 !default;
 /* -------------------------------------------------------------------------- */
 
+.toolbar {
+  font-family: "Source Sans Pro", "Lucida Grande", Verdana, sans-serif;
+  /* Set base font size to 13px based on root ems. */
+  font-size: 0.8125rem !important;
+  -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+  -o-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  tap-highlight-color: rgba(0, 0, 0, 0);
+  -moz-touch-callout: none;
+  -o-touch-callout: none;
+  -webkit-touch-callout: none;
+  touch-callout: none;
+}
+.toolbar .toolbar-tray-horizontal .toolbar-tray {
+  background-color: #f5f5f5;
+}
+.toolbar-tray a {
+  color: #565656 !important;
+  cursor: pointer;
+  padding: 1em 1.3333em;
+  text-decoration: none;
+}
+.toolbar-tray a:hover,
+.toolbar-tray a:active,
+.toolbar-tray a:focus,
+.toolbar-tray a.is-active {
+  color: #000;
+  text-decoration: underline;
+}
+.toolbar .toolbar-menu .toolbar-menu a {
+  color: #434343 !important;
+}
