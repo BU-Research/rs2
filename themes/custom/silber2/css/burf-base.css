@@ -11,6 +11,20 @@
 /* Benton */
 @font-face {
   font-family: "Benton-Sans";
+  src: url("https://www.bu.edu/cdn/fonts/Benton-Sans-Light/1d3e1be9-e2ca-44c3-b674-7228a7c97407-2.eot");
+  src: url("https://www.bu.edu/cdn/fonts/Benton-Sans-Light/1d3e1be9-e2ca-44c3-b674-7228a7c97407-2.eot?") format("embedded-opentype"), url("https://www.bu.edu/cdn/fonts/Benton-Sans-Light/1d3e1be9-e2ca-44c3-b674-7228a7c97407-3.woff") format("woff"), url("https://www.bu.edu/cdn/fonts/Benton-Sans-Light/1d3e1be9-e2ca-44c3-b674-7228a7c97407-1.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Benton-Sans";
+  src: url("https://www.bu.edu/cdn/fonts/Benton-Sans-Light-Italic/15a2d62b-ca5c-45cb-9b3d-29bef80c6e9d-2.eot");
+  src: url("https://www.bu.edu/cdn/fonts/Benton-Sans-Light-Italic/15a2d62b-ca5c-45cb-9b3d-29bef80c6e9d-2.eot?") format("embedded-opentype"), url("https://www.bu.edu/cdn/fonts/Benton-Sans-Light-Italic/15a2d62b-ca5c-45cb-9b3d-29bef80c6e9d-3.woff") format("woff"), url("https://www.bu.edu/cdn/fonts/Benton-Sans-Light-Italic/15a2d62b-ca5c-45cb-9b3d-29bef80c6e9d-1.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Benton-Sans";
   src: url("https://www.bu.edu/cdn/fonts/Benton-Sans-Regular/019c3a13-b3d7-4c5a-be27-07a8334a43e6-2.eot");
   src: url("https://www.bu.edu/cdn/fonts/Benton-Sans-Regular/019c3a13-b3d7-4c5a-be27-07a8334a43e6-2.eot?") format("embedded-opentype"), url("https://www.bu.edu/cdn/fonts/Benton-Sans-Regular/019c3a13-b3d7-4c5a-be27-07a8334a43e6-3.woff") format("woff"), url("https://www.bu.edu/cdn/fonts/Benton-Sans-Regular/019c3a13-b3d7-4c5a-be27-07a8334a43e6-1.ttf") format("truetype");
   font-style: normal;
@@ -93,6 +107,13 @@
   src: url("https://www.bu.edu/cdn/fonts/TiemposText/TiemposText-Semibold-Italic.eot?#iefix") format("embedded-opentype"), url("https://www.bu.edu/cdn/fonts/TiemposText/TiemposText-Semibold-Italic.woff") format("woff");
   font-style: italic;
   font-weight: 700;
+}
+@font-face {
+  font-family: "BU-Default-Icons";
+  src: url("https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.eot");
+  src: url("https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.eot?#iefix") format("embedded-opentype"), url("https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.woff") format("woff"), url("https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.ttf") format("truetype"), url("https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.svg#bu-default-icons") format("svg");
+  font-style: normal;
+  font-weight: 400;
 }
 /* placeholders for theme use
 ----------------------------------------------------------------- */
@@ -1661,6 +1682,136 @@
     float: left;
   }
 }
+/* base
+================================================================= */
+/* Box model
+----------------------------------------------------------------- */
+/* line 7, ../scss/burf-base/_base-global.scss */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* HTML5 display definitions
+----------------------------------------------------------------- */
+/* Correct `block` display not defined in IE 6/7/8/9 and Firefox 3. */
+/* line 19, ../scss/burf-base/_base-global.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3. */
+/* line 34, ../scss/burf-base/_base-global.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+/* Prevent modern browsers from displaying `audio` without controls. Remove excess height in iOS 5 devices. */
+/* line 42, ../scss/burf-base/_base-global.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* Address styling not present in IE 7/8/9, Firefox 3, and Safari 4. Known issue:no IE 6 support. */
+/* line 47, ../scss/burf-base/_base-global.scss */
+[hidden] {
+  display: none !important;
+}
+
+/* Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11. */
+/* line 51, ../scss/burf-base/_base-global.scss */
+figure {
+  margin: 0;
+}
+
+/* Base
+----------------------------------------------------------------- */
+/* 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using `em` units.
+   2. Prevent iOS text size adjust after orientation change, without disabling user zoom.
+   3. Normalize font rendering in Firefox */
+/* line 61, ../scss/burf-base/_base-global.scss */
+html {
+  font-size: 100%;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -moz-osx-font-smoothing: grayscale;
+  /* 3 */
+}
+
+/* Address `font-family` inconsistency between `textarea` and other form elements. */
+/* line 68, ../scss/burf-base/_base-global.scss */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+/* Address margins handled incorrectly in IE 6/7. */
+/* line 76, ../scss/burf-base/_base-global.scss */
+body {
+  margin: 0;
+  font-family: "TiemposText", Georgia, serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555555;
+}
+
+/* line 83, ../scss/burf-base/_base-global.scss */
+section {
+  margin: 60px 0 0 0;
+}
+
+/* Embedded content
+----------------------------------------------------------------- */
+/* 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+   2. Improve image quality when scaled in IE 7. */
+/* line 92, ../scss/burf-base/_base-global.scss */
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+}
+
+/* line 96, ../scss/burf-base/_base-global.scss */
+img,
+a img,
+object,
+embed {
+  height: auto;
+  max-width: 100%;
+}
+
+/* Correct overflow displayed oddly in IE 9. */
+/* line 104, ../scss/burf-base/_base-global.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
 /* Links
 ----------------------------------------------------------------- */
 /* line 4, ../scss/burf-base/_base-typography.scss */

@@ -2,6 +2,25 @@
 
 @font-face {
   font-family: "Benton-Sans";
+  src: url("https://www.bu.edu/cdn/fonts/Benton-Sans-Light/1d3e1be9-e2ca-44c3-b674-7228a7c97407-2.eot");
+  src: url("https://www.bu.edu/cdn/fonts/Benton-Sans-Light/1d3e1be9-e2ca-44c3-b674-7228a7c97407-2.eot?") format("embedded-opentype"),
+       url("https://www.bu.edu/cdn/fonts/Benton-Sans-Light/1d3e1be9-e2ca-44c3-b674-7228a7c97407-3.woff") format("woff"),
+       url("https://www.bu.edu/cdn/fonts/Benton-Sans-Light/1d3e1be9-e2ca-44c3-b674-7228a7c97407-1.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Benton-Sans";
+  src: url("https://www.bu.edu/cdn/fonts/Benton-Sans-Light-Italic/15a2d62b-ca5c-45cb-9b3d-29bef80c6e9d-2.eot");
+  src: url("https://www.bu.edu/cdn/fonts/Benton-Sans-Light-Italic/15a2d62b-ca5c-45cb-9b3d-29bef80c6e9d-2.eot?") format("embedded-opentype"),
+       url("https://www.bu.edu/cdn/fonts/Benton-Sans-Light-Italic/15a2d62b-ca5c-45cb-9b3d-29bef80c6e9d-3.woff") format("woff"),
+       url("https://www.bu.edu/cdn/fonts/Benton-Sans-Light-Italic/15a2d62b-ca5c-45cb-9b3d-29bef80c6e9d-1.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Benton-Sans";
   src: url("https://www.bu.edu/cdn/fonts/Benton-Sans-Regular/019c3a13-b3d7-4c5a-be27-07a8334a43e6-2.eot");
   src: url("https://www.bu.edu/cdn/fonts/Benton-Sans-Regular/019c3a13-b3d7-4c5a-be27-07a8334a43e6-2.eot?") format("embedded-opentype"),
        url("https://www.bu.edu/cdn/fonts/Benton-Sans-Regular/019c3a13-b3d7-4c5a-be27-07a8334a43e6-3.woff") format("woff"),
@@ -109,4 +128,16 @@
 		url("https://www.bu.edu/cdn/fonts/TiemposText/TiemposText-Semibold-Italic.woff") format("woff");
 	font-style: italic;
 	font-weight: 700;
+}
+
+@font-face {
+  font-family: "BU-Default-Icons";
+  src: url("https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.eot");
+  src: url("https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.eot?#iefix") format("embedded-opentype"),
+       url("https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.woff") format("woff"),
+       url("https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.ttf") format("truetype"),
+       url("https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.svg#bu-default-icons") format("svg");
+  font-style: normal;
+  font-weight: 400;
+  //unicode-range:U+??????; /* Include all Unicode possiblities */
 }
